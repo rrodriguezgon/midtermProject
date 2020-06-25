@@ -1,0 +1,12 @@
+package com.ironhack.midtermProject;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+class MidtermProjectApplicationTests {
+
+	@Test
+	public void main() {
+		MidtermProjectApplication.main(new String[] {});
+	}
+}
