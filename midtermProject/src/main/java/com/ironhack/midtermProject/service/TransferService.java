@@ -1,7 +1,9 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.*;
-import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.enums.StatusAccount;
 import com.ironhack.midtermProject.exception.*;
 import com.ironhack.midtermProject.model.entities.*;
@@ -21,6 +23,9 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ *
+ */
 @Service
 public class TransferService {
 
@@ -50,15 +55,20 @@ public class TransferService {
     @Autowired
     private TranferRepository transferRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<Transfer> findAll(){
         return transferRepository.findAll();
     }
 
-    // MODIFICAR PARA FILTRAR POR USUARIO.
-    public List<Transfer> findAlllByUserId(Integer id){
-        return transferRepository.findAll();
-    }
-
+    /**
+     *
+     * @param userLogin
+     * @param createTransferDto
+     * @return
+     */
     public Transfer createTransfer(User userLogin, CreateTransferDto createTransferDto){
         User user = parseUser(userLogin);
         Account accountEmitter = getAccount(createTransferDto.getEmitterAccountId());
@@ -94,6 +104,13 @@ public class TransferService {
         return transferRepository.save(transfer);
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param createTransactionDto
+     * @param hashKey
+     * @return
+     */
     public Transfer createTransaction(User userLogin, CreateTransactionDto createTransactionDto, String hashKey){
         User user = parseUser(userLogin);
 
@@ -126,6 +143,13 @@ public class TransferService {
         return transferRepository.save(transfer);
     }
 
+    /**
+     *
+     * @param user
+     * @param createTransactionDto
+     * @param hashKey
+     * @param account
+     */
     private void checkPermissionsTransaction(ThirdParty user, CreateTransactionDto createTransactionDto, String hashKey, Account account) {
         Boolean checked = false;
         String secretKeyAccount = "";
@@ -161,6 +185,11 @@ public class TransferService {
         }
     }
 
+    /**
+     *
+     * @param accountId
+     * @return
+     */
     private Account getAccount(Integer accountId) {
         Account account = null;
 
@@ -182,6 +211,10 @@ public class TransferService {
         }
     }
 
+    /**
+     *
+     * @param account
+     */
     private void saveAccount(Account account){
         if (account instanceof SavingsAccount){
             savingsAccountRepository.save((SavingsAccount)account);
@@ -200,6 +233,13 @@ public class TransferService {
         }
     }
 
+    /**
+     *
+     * @param accountEmitter
+     * @param accountReceiver
+     * @param user
+     * @param accountReceiverName
+     */
     private void checkPermissionsTransfer(Account accountEmitter, Account accountReceiver, User user, String accountReceiverName) {
         Boolean check = false;
 
@@ -278,6 +318,10 @@ public class TransferService {
         //endregion
     }
 
+    /**
+     *
+     * @param account
+     */
     private void checkPenalityAccount(Account account){
         if (account instanceof CheckingAccount
                 && (account.getBalance().getAmount().compareTo(((CheckingAccount) account)
@@ -301,6 +345,11 @@ public class TransferService {
         }
     }
 
+    /**
+     *
+     * @param userLogin
+     * @return
+     */
     private User parseUser(User userLogin){
         User user = adminRepository.findByUsername(userLogin.getUsername());
         if (user == null){
@@ -314,17 +363,26 @@ public class TransferService {
         return user;
     }
 
+    /**
+     *
+     * @param account
+     */
     private void checkInterestRate(Account account){
         if (account instanceof SavingsAccount){
-            calcularInteresXAño(calcularXAño(account.getUpdatedAt()),(SavingsAccount) account);
+            calcInterestRateXYear(calcXYear(account.getUpdatedAt()),(SavingsAccount) account);
         }
 
         if (account instanceof CreditCardAccount){
-            calcularInteresXMes(calcularXMes(account.getUpdatedAt()),(CreditCardAccount) account);
+            calcInterestRateXMonth(calcXMonth(account.getUpdatedAt()),(CreditCardAccount) account);
         }
     }
 
-    private int[] calcularXMes(LocalDate fechaNacDate) {
+    /**
+     *
+     * @param fechaNacDate
+     * @return
+     */
+    private int[] calcXMonth(LocalDate fechaNacDate) {
         Calendar fechaActual = Calendar.getInstance();
 
         Calendar fechaNac = Calendar.getInstance();
@@ -348,7 +406,12 @@ public class TransferService {
         return new int[] {months, days};
     }
 
-    private void calcularInteresXMes(int[] calcTime, CreditCardAccount savingsAccount){
+    /**
+     *
+     * @param calcTime
+     * @param savingsAccount
+     */
+    private void calcInterestRateXMonth(int[] calcTime, CreditCardAccount savingsAccount){
 
         int countMonths = calcTime[0];
         int countDays = calcTime[1];
@@ -364,7 +427,12 @@ public class TransferService {
         savingsAccount.setUpdatedAt(LocalDate.now().minusDays(countDays));
     }
 
-    private int[] calcularXAño(LocalDate fechaNacDate) {
+    /**
+     *
+     * @param fechaNacDate
+     * @return
+     */
+    private int[] calcXYear(LocalDate fechaNacDate) {
         Calendar fechaActual = Calendar.getInstance();
 
         Calendar fechaNac = Calendar.getInstance();
@@ -386,7 +454,12 @@ public class TransferService {
         return new int[] {years, months};
     }
 
-    private void calcularInteresXAño(int[] calcTime, SavingsAccount savingsAccount){
+    /**
+     *
+     * @param calcTime
+     * @param savingsAccount
+     */
+    private void calcInterestRateXYear(int[] calcTime, SavingsAccount savingsAccount){
 
         int countYears = calcTime[0];
         int countMonths = calcTime[1];
@@ -402,6 +475,10 @@ public class TransferService {
         savingsAccount.setUpdatedAt(LocalDate.now().minusMonths(countMonths));
     }
 
+    /**
+     *
+     * @param account
+     */
     private void checkFraud(Account account){
         double maxTransactionsAccount = getMaxTransactionsAccount(account.getId()) * 1.5;
         Integer numberTransactionsAccountDay = getNumberTransactionsAccountDay(account.getId());
@@ -427,14 +504,29 @@ public class TransferService {
         }
     }
 
+    /**
+     *
+     * @param accountId
+     * @return
+     */
     private Integer getMaxTransactionsAccount(Integer accountId){
         return transferRepository.getMaxTransactionsAccount(accountId);
     }
 
+    /**
+     *
+     * @param accountId
+     * @return
+     */
     private Integer getNumberTransactionsAccountDay(Integer accountId){
         return transferRepository.getNumberTransactionsAccountDay(accountId);
     }
 
+    /**
+     *
+     * @param accountId
+     * @return
+     */
     private Integer getNumberTransactionsAccountSecond(Integer accountId){
         return transferRepository.getNumberTransactionsAccountSecond(accountId);
     }

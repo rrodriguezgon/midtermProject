@@ -77,13 +77,13 @@ class ThirdPartyControllerImplTest {
 
     @Test
     void getById() throws Exception {
-        mockMvc.perform(get("/thirdarty/1"))
+        mockMvc.perform(get("/thirdparty/1"))
                 .andExpect(status().isOk());
     }
 
     @Test
     void create() throws Exception {
-        mockMvc.perform(post("/thirdarty")
+        mockMvc.perform(post("/thirdparty")
                 .content(objectMapper.writeValueAsString(createThirdPartyDto))
                 .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(status().isCreated());
@@ -91,7 +91,7 @@ class ThirdPartyControllerImplTest {
 
     @Test
     void update() throws Exception {
-        mockMvc.perform(put("/thirdarty/1")
+        mockMvc.perform(put("/thirdparty/1")
                 .content(objectMapper.writeValueAsString(createThirdPartyDto))
                 .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(status().isNoContent());
@@ -99,7 +99,7 @@ class ThirdPartyControllerImplTest {
 
     @Test
     void deleteById() throws Exception {
-        mockMvc.perform(delete("/thirdarty/1")
+        mockMvc.perform(delete("/thirdparty/1")
         ).andExpect(status().isNoContent());
     }
 }

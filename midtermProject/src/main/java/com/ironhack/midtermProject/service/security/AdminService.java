@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service.security;
 
 import com.ironhack.midtermProject.controller.dto.security.CreateAdminDto;
@@ -19,6 +22,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *
+ */
 @Service
 public class AdminService {
 
@@ -27,10 +33,19 @@ public class AdminService {
     @Autowired
     private AdminRepository adminRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<Admin> findAll(){
         return adminRepository.findAll();
     }
 
+    /**
+     *
+     * @param createAdminDto
+     * @return
+     */
     public Admin Create(CreateAdminDto createAdminDto){
 
         Admin user = adminRepository.findByUsername(createAdminDto.getUsername());
@@ -57,10 +72,21 @@ public class AdminService {
         return adminRepository.save(admin);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public Admin findById(Integer id){
         return adminRepository.findById(id).orElseThrow(() -> new DataNotFoundException("this Admin id not Found."));
     }
 
+    /**
+     *
+     * @param id
+     * @param createAdminDto
+     * @return
+     */
     public Admin update(Integer id, CreateAdminDto createAdminDto){
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
@@ -73,6 +99,10 @@ public class AdminService {
         return adminRepository.save(adminFound);
     }
 
+    /**
+     *
+     * @param id
+     */
     public void deleteById(Integer id){
         Admin admin = findById(id);
 

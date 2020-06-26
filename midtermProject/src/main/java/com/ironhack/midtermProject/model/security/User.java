@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.model.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -10,6 +13,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *
+ */
 @Entity
 @Inheritance(
         strategy = InheritanceType.JOINED
@@ -31,41 +37,81 @@ public abstract class User {
     @Fetch(value = FetchMode.SUBSELECT)
     private List<Transfer> transfersMade;
 
+    /**
+     *
+     */
     public User(){}
 
+    /**
+     *
+     * @param username
+     * @param password
+     */
     public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getId() {
         return id;
     }
 
+    /**
+     *
+     * @param id
+     */
     public void setId(Integer id) {
         this.id = id;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     *
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     *
+     * @return
+     */
     public Set<Role> getRoles() {
         return roles;
     }
 
+    /**
+     *
+     * @param roles
+     */
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }

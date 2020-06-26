@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.security;
 
 import com.ironhack.midtermProject.model.security.Role;
@@ -10,13 +13,15 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ *
+ */
 public class CustomSecurityUser extends User implements UserDetails {
     private static final long serialVersionUID = -4381938875186527688L;
 
     /** CustomerSecurity Constructor
      * @param user a User element
      */
-
     public CustomSecurityUser(User user) {
         System.out.println(user);
         this.setRoles(user.getRoles());

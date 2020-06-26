@@ -1,9 +1,15 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.controller.dto;
 
 import javax.validation.constraints.*;
 
 import java.math.BigDecimal;
 
+/**
+ *
+ */
 public class CreateSavingAccountDto {
 
     @DecimalMin(value = "0.0025", inclusive = true, message = "the parameter interestRate is less than the minimum it is: 0.0025")
@@ -22,8 +28,19 @@ public class CreateSavingAccountDto {
 
     private Integer secondaryOwnerId;
 
+    /**
+     *
+     */
     public CreateSavingAccountDto(){}
 
+    /**
+     *
+     * @param interestRate
+     * @param balance
+     * @param secretKey
+     * @param primaryOwnerId
+     * @param secondaryOwnerId
+     */
     public CreateSavingAccountDto(BigDecimal interestRate, BigDecimal balance, String secretKey,
                                    Integer primaryOwnerId, Integer secondaryOwnerId) {
         this.interestRate = interestRate;
@@ -33,42 +50,82 @@ public class CreateSavingAccountDto {
         this.secondaryOwnerId = secondaryOwnerId;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getBalance() {
         return balance;
     }
 
+    /**
+     *
+     * @param balance
+     */
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSecretKey() {
         return secretKey;
     }
 
+    /**
+     *
+     * @param secretKey
+     */
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getInterestRate() {
         return interestRate;
     }
 
+    /**
+     *
+     * @param interestRate
+     */
     public void setInterestRate(BigDecimal interestRate) {
         this.interestRate = interestRate;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getPrimaryOwnerId() {
         return primaryOwnerId;
     }
 
+    /**
+     *
+     * @param primaryOwnerId
+     */
     public void setPrimaryOwnerId(Integer primaryOwnerId) {
         this.primaryOwnerId = primaryOwnerId;
     }
 
+    /**
+     *
+     * @return
+     */
     public Integer getSecondaryOwnerId() {
         return secondaryOwnerId;
     }
 
+    /**
+     *
+     * @param secondaryOwnerId
+     */
     public void setSecondaryOwnerId(Integer secondaryOwnerId) {
         this.secondaryOwnerId = secondaryOwnerId;
     }

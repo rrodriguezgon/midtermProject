@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.model.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -7,6 +10,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Optional;
 
+/**
+ *
+ */
 @Entity
 @PrimaryKeyJoinColumn(name="id")
 public class CreditCardAccount extends Account {
@@ -18,10 +24,19 @@ public class CreditCardAccount extends Account {
     private BigDecimal creditLimit;
     private BigDecimal interestRate;
 
+    /**
+     *
+     */
     public CreditCardAccount(){
         super();
     }
 
+    /**
+     *
+     * @param creditLimit
+     * @param interestRate
+     * @param balance
+     */
     public CreditCardAccount( BigDecimal creditLimit,
                               BigDecimal interestRate, Money balance) {
         super(balance);
@@ -39,27 +54,52 @@ public class CreditCardAccount extends Account {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @JsonIgnore
     public BigDecimal getMIN_CREDITLIMIT() {
         return MIN_CREDITLIMIT;
     }
+
+    /**
+     *
+     * @return
+     */
     @JsonIgnore
     public BigDecimal getMIN_RATE() {
         return MIN_RATE;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getCreditLimit() {
         return creditLimit;
     }
 
+    /**
+     *
+     * @param creditLimit
+     */
     public void setCreditLimit(BigDecimal creditLimit) {
         this.creditLimit = creditLimit;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getInterestRate() {
         return interestRate;
     }
 
+    /**
+     *
+     * @param interestRate
+     */
     public void setInterestRate(BigDecimal interestRate) {
         this.interestRate = interestRate;
     }

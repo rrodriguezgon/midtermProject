@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.CreateSavingAccountDto;
@@ -20,6 +23,9 @@ import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.List;
 
+/**
+ *
+ */
 @Service
 public class SavingAccountService {
 
@@ -37,10 +43,19 @@ public class SavingAccountService {
     @Autowired
     private ThirdPartyRepository thirdPartyRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<SavingsAccount> findAll(){
         return savingsAccountRepository.findAll();
     }
 
+    /**
+     *
+     * @param createSavingAccountDto
+     * @return
+     */
     public SavingsAccount Create(CreateSavingAccountDto createSavingAccountDto){
         AccountHolder primaryOwner = null;
         AccountHolder secondaryOwner = null;
@@ -62,6 +77,12 @@ public class SavingAccountService {
         return savingsAccountRepository.save(savingsAccount);
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param id
+     * @return
+     */
     public SavingsAccount getById(User userLogin, Integer id){
         User user = parseUser(userLogin);
         SavingsAccount savingsAccount = savingsAccountRepository.findById(id).orElseThrow(() -> new DataNotFoundException("this savingAccount Id not Found."));
@@ -72,14 +93,20 @@ public class SavingAccountService {
             throw ex;
         }
 
-        int[] calcTime = calcularXAño(savingsAccount.getUpdatedAt());
+        int[] calcTime = calcXYear(savingsAccount.getUpdatedAt());
         if (calcTime[0] >= 1){
-            calcularInteres(calcTime,savingsAccount);
+            calcInterestRate(calcTime,savingsAccount);
         }
 
         return savingsAccount;
     }
 
+    /**
+     *
+     * @param account
+     * @param user
+     * @return
+     */
     private Boolean checkPermissions(Account account, User user) {
         if ((user instanceof Admin) == false){
             User primaryuserAccount = account.getPrimaryOwner();
@@ -103,7 +130,12 @@ public class SavingAccountService {
         }
     }
 
-    private int[] calcularXAño(LocalDate fechaNacDate) {
+    /**
+     *
+     * @param fechaNacDate
+     * @return
+     */
+    private int[] calcXYear(LocalDate fechaNacDate) {
         Calendar fechaActual = Calendar.getInstance();
 
         Calendar fechaNac = Calendar.getInstance();
@@ -121,7 +153,12 @@ public class SavingAccountService {
         return new int[] {years, months};
     }
 
-    private void calcularInteres(int[] calcTime, SavingsAccount savingsAccount){
+    /**
+     *
+     * @param calcTime
+     * @param savingsAccount
+     */
+    private void calcInterestRate(int[] calcTime, SavingsAccount savingsAccount){
 
         int countYears = calcTime[0];
         int countMonths = calcTime[1];
@@ -137,6 +174,11 @@ public class SavingAccountService {
         savingsAccount.setUpdatedAt(LocalDate.now().minusMonths(countMonths));
     }
 
+    /**
+     *
+     * @param userLogin
+     * @return
+     */
     private User parseUser(User userLogin){
         User user = adminRepository.findByUsername(userLogin.getUsername());
         if (user == null){
@@ -150,6 +192,12 @@ public class SavingAccountService {
         return user;
     }
 
+    /**
+     *
+     * @param account
+     * @param primaryOwner
+     * @param secondaryOwner
+     */
     private void addOwners(Account account, AccountHolder primaryOwner, AccountHolder secondaryOwner){
 
         if (primaryOwner != null){

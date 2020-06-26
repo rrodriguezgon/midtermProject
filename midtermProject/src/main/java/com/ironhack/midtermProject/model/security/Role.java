@@ -1,15 +1,19 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.model.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
+/**
+ *
+ */
 @Entity
 @Table(name="role")
 public class Role {
-    /**
-     * Attributes
-     */
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -31,8 +35,6 @@ public class Role {
     public Role(String role) {
         this.role = role;
     }
-
-    /**Getters & Setters**/
 
     /**
      * This method gets Role's id

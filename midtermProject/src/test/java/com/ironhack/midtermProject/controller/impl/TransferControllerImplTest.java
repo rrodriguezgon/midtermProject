@@ -86,12 +86,6 @@ class TransferControllerImplTest {
     }
 
     @Test
-    void getAllByIdUser( ) throws Exception{
-        mockMvc.perform(get("/transfer/1"))
-                .andExpect(status().isOk());
-    }
-
-    @Test
     void createTransfer() throws Exception {
         mockMvc.perform(post("/transfer")
                 .content(objectMapper.writeValueAsString(createTransferDto))

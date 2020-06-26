@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.CreateCheckingAccountDto;
@@ -18,6 +21,9 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ *
+ */
 @Service
 public class CheckingAccountService {
 
@@ -38,6 +44,10 @@ public class CheckingAccountService {
     @Autowired
     private ThirdPartyRepository thirdPartyRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<Account> findAll(){
         List<CheckingAccount> checkingAccounts = checkingAccountRepository.findAll();
         List<StudentCheckingAccount> studentCheckingAccounts  = studentCheckingAccountRepository.findAll();
@@ -48,6 +58,11 @@ public class CheckingAccountService {
         return listAccount;
     }
 
+    /**
+     *
+     * @param checkingAccountdto
+     * @return
+     */
     public Account Create(CreateCheckingAccountDto checkingAccountdto){
         AccountHolder primaryOwner = null;
         AccountHolder secondaryOwner = null;
@@ -80,6 +95,12 @@ public class CheckingAccountService {
         }
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param id
+     * @return
+     */
     public Account findById(User userLogin, Integer id){
         User user = parseUser(userLogin);
         Account account = null;
@@ -101,6 +122,11 @@ public class CheckingAccountService {
         return account;
     }
 
+    /**
+     *
+     * @param fechaNacDate
+     * @return
+     */
     private int calcular(LocalDate fechaNacDate) {
         Calendar fechaActual = Calendar.getInstance();
 
@@ -123,6 +149,12 @@ public class CheckingAccountService {
         return years;
     }
 
+    /**
+     *
+     * @param account
+     * @param primaryOwner
+     * @param secondaryOwner
+     */
     private void addOwners(Account account, AccountHolder primaryOwner, AccountHolder secondaryOwner){
 
         if (primaryOwner != null){
@@ -134,6 +166,12 @@ public class CheckingAccountService {
         }
     }
 
+    /**
+     *
+     * @param account
+     * @param user
+     * @return
+     */
     private Boolean checkPermissions(Account account, User user) {
         if ((user instanceof Admin) == false){
             Boolean checked = false;
@@ -157,6 +195,11 @@ public class CheckingAccountService {
         }
     }
 
+    /**
+     *
+     * @param userLogin
+     * @return
+     */
     private User parseUser(User userLogin){
         User user = adminRepository.findByUsername(userLogin.getUsername());
         if (user == null){

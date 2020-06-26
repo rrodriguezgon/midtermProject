@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service.security;
 
 import com.ironhack.midtermProject.controller.dto.security.CreateThirdPartyDto;
@@ -20,6 +23,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *
+ */
 @Service
 public class ThirdPartyService {
 
@@ -28,10 +34,19 @@ public class ThirdPartyService {
     @Autowired
     private ThirdPartyRepository thirdPartyRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<ThirdParty> findAll(){
         return thirdPartyRepository.findAll();
     }
 
+    /**
+     *
+     * @param createThirdPartyDto
+     * @return
+     */
     public ThirdParty Create(CreateThirdPartyDto createThirdPartyDto){
         ThirdParty user = thirdPartyRepository.findByUsername(createThirdPartyDto.getName());
 
@@ -57,10 +72,21 @@ public class ThirdPartyService {
         return thirdPartyRepository.save(thirdParty);
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public ThirdParty findById(Integer id){
         return thirdPartyRepository.findById(id).orElseThrow(() -> new DataNotFoundException("this ThirdParty id not Found."));
     }
 
+    /**
+     *
+     * @param id
+     * @param createThirdPartyDto
+     * @return
+     */
     public ThirdParty update(Integer id, CreateThirdPartyDto createThirdPartyDto){
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         ThirdParty thirdPartyFound = findById(id);
@@ -72,6 +98,10 @@ public class ThirdPartyService {
         return thirdPartyRepository.save(thirdPartyFound);
     }
 
+    /**
+     *
+     * @param id
+     */
     public void deleteById(Integer id){
         ThirdParty thirdPartyFound = findById(id);
 

@@ -1,6 +1,8 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service.security;
 
-import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.repository.security.*;
 import com.ironhack.midtermProject.security.CustomSecurityUser;
@@ -10,6 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
+/**
+ *
+ */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 

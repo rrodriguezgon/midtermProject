@@ -1,10 +1,14 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.model.entities;
-
-import com.ironhack.midtermProject.enums.StatusAccount;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+/**
+ *
+ */
 @Entity
 public class CheckingAccount extends AccountKey {
 
@@ -14,10 +18,18 @@ public class CheckingAccount extends AccountKey {
     private BigDecimal minimumBalance;
     private int monthlyMaintenanceFee;
 
+    /**
+     *
+     */
     public CheckingAccount(){
         super();
     }
 
+    /**
+     *
+     * @param balance
+     * @param secretKey
+     */
     public CheckingAccount(Money balance,
                            String secretKey) {
         super(balance,secretKey);
@@ -25,23 +37,50 @@ public class CheckingAccount extends AccountKey {
         this.monthlyMaintenanceFee = MONTLYMAINTENANCEFEE_DEFAULT;
     }
 
+    /**
+     *
+     * @return
+     */
     public BigDecimal getMinimumBalance() {
         return minimumBalance;
     }
+
+    /**
+     *
+     * @param minimumBalance
+     */
     public void setMinimumBalance(BigDecimal minimumBalance) {
         this.minimumBalance = minimumBalance;
     }
+
+    /**
+     *
+     * @return
+     */
     public int getMonthlyMaintenanceFee() {
         return monthlyMaintenanceFee;
     }
 
+    /**
+     *
+     * @param monthlyMaintenanceFee
+     */
     public void setMonthlyMaintenanceFee(int monthlyMaintenanceFee) {
         this.monthlyMaintenanceFee = monthlyMaintenanceFee;
     }
+
+    /**
+     *
+     * @return
+     */
     public BigDecimal getMINIMUM_BALANCE_DEFAULT() {
         return MINIMUM_BALANCE_DEFAULT;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getMONTLYMAINTENANCEFEE_DEFAULT() {
         return MONTLYMAINTENANCEFEE_DEFAULT;
     }

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.CreateCreditCardAccountDto;
@@ -19,6 +22,9 @@ import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.List;
 
+/**
+ *
+ */
 @Service
 public class CreditCardAccountService {
 
@@ -36,10 +42,19 @@ public class CreditCardAccountService {
     @Autowired
     private ThirdPartyRepository thirdPartyRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<CreditCardAccount> findAll(){
         return creditCardAccountRepository.findAll();
     }
 
+    /**
+     *
+     * @param createCreditCardAccountDto
+     * @return
+     */
     public CreditCardAccount Create(CreateCreditCardAccountDto createCreditCardAccountDto){
 
         AccountHolder primaryOwner = null;
@@ -62,6 +77,12 @@ public class CreditCardAccountService {
         return creditCardAccountRepository.save(creditCardAccount);
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param id
+     * @return
+     */
     public CreditCardAccount getById(User userLogin, Integer id){
         User user = parseUser(userLogin);
 
@@ -81,6 +102,12 @@ public class CreditCardAccountService {
         return creditCardAccount;
     }
 
+    /**
+     *
+     * @param account
+     * @param user
+     * @return
+     */
     private Boolean checkPermissions(Account account, User user) {
         if ((user instanceof Admin) == false){
             User primaryuserAccount = account.getPrimaryOwner();
@@ -104,6 +131,11 @@ public class CreditCardAccountService {
         }
     }
 
+    /**
+     *
+     * @param fechaNacDate
+     * @return
+     */
     private int[] calcularXMes(LocalDate fechaNacDate) {
         Calendar fechaActual = Calendar.getInstance();
 
@@ -124,6 +156,11 @@ public class CreditCardAccountService {
         return new int[] {months, days};
     }
 
+    /**
+     *
+     * @param calcTime
+     * @param savingsAccount
+     */
     private void calcularInteres(int[] calcTime, CreditCardAccount savingsAccount){
 
         int countMonths = calcTime[0];
@@ -140,6 +177,11 @@ public class CreditCardAccountService {
         savingsAccount.setUpdatedAt(LocalDate.now().minusDays(countDays));
     }
 
+    /**
+     *
+     * @param userLogin
+     * @return
+     */
     private User parseUser(User userLogin){
         User user = adminRepository.findByUsername(userLogin.getUsername());
         if (user == null){
@@ -153,6 +195,12 @@ public class CreditCardAccountService {
         return user;
     }
 
+    /**
+     *
+     * @param account
+     * @param primaryOwner
+     * @param secondaryOwner
+     */
     private void addOwners(Account account, AccountHolder primaryOwner, AccountHolder secondaryOwner){
 
         if (primaryOwner != null){

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.security;
 
 import com.ironhack.midtermProject.service.security.UserDetailsServiceImpl;
@@ -14,6 +17,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.savedrequest.NullRequestCache;
 
+/**
+ *
+ */
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled=true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -82,10 +88,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 // region ----  ThirdParty Controller ----
 
                 .mvcMatchers("/thirdparties").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.POST,"/thirdarty").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.GET,"/thirdarty/{id}").hasAnyAuthority("ROLE_THIRDPARTY","ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.PUT,"/thirdarty/{id}").hasAuthority("ROLE_ADMIN")
-                .mvcMatchers(HttpMethod.DELETE,"/thirdarty/{id}").hasAuthority("ROLE_ADMIN")
+                .mvcMatchers(HttpMethod.POST,"/thirdparty").hasAuthority("ROLE_ADMIN")
+                .mvcMatchers(HttpMethod.GET,"/thirdparty/{id}").hasAnyAuthority("ROLE_THIRDPARTY","ROLE_ADMIN")
+                .mvcMatchers(HttpMethod.PUT,"/thirdparty/{id}").hasAuthority("ROLE_ADMIN")
+                .mvcMatchers(HttpMethod.DELETE,"/thirdparty/{id}").hasAuthority("ROLE_ADMIN")
 
                 // endregion
 

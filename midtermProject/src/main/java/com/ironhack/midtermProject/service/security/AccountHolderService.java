@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package com.ironhack.midtermProject.service.security;
 
 import com.ironhack.midtermProject.controller.dto.security.CreateAccountHolderDto;
@@ -18,6 +21,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *
+ */
 @Service
 public class AccountHolderService {
 
@@ -29,10 +35,19 @@ public class AccountHolderService {
     @Autowired
     private AdminRepository adminRepository;
 
+    /**
+     *
+     * @return
+     */
     public List<AccountHolder> findAll(){
         return accountHolderRepository.findAll();
     }
 
+    /**
+     *
+     * @param createAccountHolderDto
+     * @return
+     */
     public AccountHolder Create(CreateAccountHolderDto createAccountHolderDto){
         AccountHolder user = accountHolderRepository.findByUsername(createAccountHolderDto.getUsername());
 
@@ -66,6 +81,12 @@ public class AccountHolderService {
         return accountHolderRepository.save(accountHolder);
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param id
+     * @return
+     */
     public AccountHolder findById(User userLogin, Integer id){
         User user = parseUser(userLogin);
 
@@ -76,6 +97,13 @@ public class AccountHolderService {
         return accountHolderRepository.findById(id).orElseThrow(() -> new DataNotFoundException("this AccountHolder id not Found."));
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param id
+     * @param updateAccountHolderDto
+     * @return
+     */
     public AccountHolder update(User userLogin, Integer id, UpdateAccountHolderDto updateAccountHolderDto){
         AccountHolder accountHolderFound = findById(userLogin, id);
 
@@ -88,12 +116,23 @@ public class AccountHolderService {
         return accountHolderRepository.save(accountHolderFound);
     }
 
+    /**
+     *
+     * @param userLogin
+     * @param id
+     */
     public void deleteById(User userLogin, Integer id){
         AccountHolder accountHolder = findById(userLogin, id);
 
         accountHolderRepository.delete(accountHolder);
     }
 
+    /**
+     *
+     * @param user
+     * @param id
+     * @return
+     */
     private Boolean checkPermissions(User user, Integer id) {
         if ((user instanceof Admin) == false){
             return user.getId() == id;
@@ -102,6 +141,11 @@ public class AccountHolderService {
         }
     }
 
+    /**
+     *
+     * @param userLogin
+     * @return
+     */
     private User parseUser(User userLogin){
         User user = adminRepository.findByUsername(userLogin.getUsername());
         if (user == null){
