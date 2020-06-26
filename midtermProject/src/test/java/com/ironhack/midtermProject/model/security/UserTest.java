@@ -42,7 +42,7 @@ class UserTest {
 
     @Test
     void getRoles() {
-        Set<Role> param = new HashSet<>();
+        HashSet<Role> param = new HashSet<>();
         user.setRoles(param);
 
         assertEquals(param,user.getRoles());

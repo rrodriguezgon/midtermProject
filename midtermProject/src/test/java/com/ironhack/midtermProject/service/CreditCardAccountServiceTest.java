@@ -64,7 +64,7 @@ class CreditCardAccountServiceTest {
         accountHolderAdult =
                 new AccountHolder("adult", "password",
                         "Raquel","Rodriguez",
-                        LocalDate.parse("1992-02-15"),
+                        LocalDate.parse("1992-06-15"),
                         address, "mailingAddress");
         accountHolderAdult.setId(1);
 

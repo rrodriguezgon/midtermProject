@@ -4,6 +4,7 @@ import com.ironhack.midtermProject.controller.dto.security.CreateAdminDto;
 import com.ironhack.midtermProject.controller.interfaces.security.AdminController;
 import com.ironhack.midtermProject.model.security.Admin;
 import com.ironhack.midtermProject.service.security.AdminService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Api(tags = "Admin Controller")
 @RestController
+@RequestMapping("/")
 public class AdminControllerImpl implements AdminController {
 
     @Autowired

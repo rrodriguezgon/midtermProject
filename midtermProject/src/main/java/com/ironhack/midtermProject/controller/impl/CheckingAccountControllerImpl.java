@@ -5,6 +5,7 @@ import com.ironhack.midtermProject.controller.interfaces.CheckingAccountControll
 import com.ironhack.midtermProject.model.entities.Account;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.CheckingAccountService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Api(tags = "Checking Account Controller")
 @RestController
+@RequestMapping("/")
 public class CheckingAccountControllerImpl implements CheckingAccountController {
 
     @Autowired

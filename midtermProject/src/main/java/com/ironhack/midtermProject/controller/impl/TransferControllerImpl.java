@@ -6,6 +6,7 @@ import com.ironhack.midtermProject.controller.interfaces.TransferController;
 import com.ironhack.midtermProject.model.entities.Transfer;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.TransferService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Api(tags = "Transfer Controller")
 @RestController
+@RequestMapping("/")
 public class TransferControllerImpl implements TransferController {
 
     @Autowired
@@ -29,7 +32,7 @@ public class TransferControllerImpl implements TransferController {
     @GetMapping("/transfers/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Transfer getById(@PathVariable Integer id) {
-        return null;
+        return new Transfer();
     }
 
     @GetMapping("/transfer/{id}")

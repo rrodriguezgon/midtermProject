@@ -1,9 +1,6 @@
 package com.ironhack.midtermProject.handler;
 
-import com.ironhack.midtermProject.exception.DataNotFoundException;
-import com.ironhack.midtermProject.exception.FundsException;
-import com.ironhack.midtermProject.exception.SecurityAccessException;
-import com.ironhack.midtermProject.exception.UserExistException;
+import com.ironhack.midtermProject.exception.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,5 +32,10 @@ class GlobalHandlerTest {
     @Test
     void handleUserExistException() {
         assertThrows(Exception.class, () ->  globalHandler.handleUserExistException(new UserExistException("Not found."), null));
+    }
+
+    @Test
+    void handleFraudException() {
+            assertThrows(Exception.class, () ->  globalHandler.handleFraudException(new FraudException("Not found."), null));
     }
 }

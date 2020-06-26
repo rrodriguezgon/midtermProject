@@ -6,6 +6,8 @@ import com.ironhack.midtermProject.controller.interfaces.security.AccountHolderC
 import com.ironhack.midtermProject.model.security.AccountHolder;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.security.AccountHolderService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,7 +16,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@Api(tags = "AccountHolder Controller")
 @RestController
+@RequestMapping("/")
 public class AccountHolderControllerImpl implements AccountHolderController {
 
     @Autowired

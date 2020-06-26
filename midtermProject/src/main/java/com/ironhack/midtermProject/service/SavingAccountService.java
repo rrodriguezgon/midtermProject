@@ -111,10 +111,6 @@ public class SavingAccountService {
         // a la fecha actual, para restar 1 a la diferencia de años,
         // pues aún no ha sido su cumpleaños.
 
-        if(months < 0 // Aún no es el mes de su cumpleaños
-                || (months==0 && days < 0)) { // o es el mes pero no ha llegado el día.
-            years--;
-        }
         return new int[] {years, months};
     }
 

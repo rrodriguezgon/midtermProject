@@ -39,7 +39,7 @@ public class ThirdPartyService {
 
         thirdParty.setPassword(passwordEncoder.encode(createThirdPartyDto.getPassword()));
 
-        Set<Role> roles = new HashSet<Role>();
+        HashSet<Role> roles = new HashSet<Role>();
         Role role = new Role("ROLE_THIRDPARTY");
         role.setUser(thirdParty);
         roles.add(role);

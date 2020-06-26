@@ -1,6 +1,8 @@
 package com.ironhack.midtermProject.service;
 
+import com.ironhack.midtermProject.controller.dto.CreateTransactionDto;
 import com.ironhack.midtermProject.controller.dto.CreateTransferDto;
+import com.ironhack.midtermProject.enums.TypeTransaction;
 import com.ironhack.midtermProject.exception.FundsException;
 import com.ironhack.midtermProject.exception.SecurityAccessException;
 import com.ironhack.midtermProject.model.entities.*;
@@ -95,7 +97,7 @@ class TransferServiceTest {
         thirdParty.setId(4);
 
         checkingAccount =
-                new CheckingAccount(new Money(new BigDecimal("1000")),
+                new CheckingAccount(new Money(new BigDecimal("300")),
                         "secretKey");
         checkingAccount.setId(1);
         checkingAccount.setPrimaryOwner(accountHolderAdult);
@@ -108,18 +110,20 @@ class TransferServiceTest {
         studentCheckingAccount.setPrimaryOwner(accountHolderStudent);
         studentCheckingAccount.setSecondaryOwner(accountHolderAdult);
 
-        creditCardAccount = new CreditCardAccount(new BigDecimal("1"),
-                new BigDecimal("1"), new Money(new BigDecimal("1000")));
+        creditCardAccount = new CreditCardAccount(new BigDecimal("250"),
+                new BigDecimal("1"), new Money(new BigDecimal("300")));
 
         creditCardAccount.setId(3);
         creditCardAccount.setPrimaryOwner(accountHolderStudent);
         creditCardAccount.setSecondaryOwner(accountHolderAdult);
+        creditCardAccount.setUpdatedAt(LocalDate.parse("2018-01-01"));
 
         savingsAccount = new SavingsAccount(new Money(new BigDecimal("1000")),
                 "secretKey", new BigDecimal("0"));
         savingsAccount.setId(4);
         savingsAccount.setPrimaryOwner(accountHolderAdult);
         savingsAccount.setSecondaryOwner(accountHolderStudent);
+        savingsAccount.setUpdatedAt(LocalDate.parse("2018-01-01"));
 
         when(transferRepository.findAll()).thenReturn(list);
         when(transferRepository.save(any(Transfer.class))).thenReturn(transfer);
@@ -158,7 +162,25 @@ class TransferServiceTest {
     @Test
     void createTransferOK() {
         CreateTransferDto  createTransferDto =
-                new CreateTransferDto(1, 2, "Raquel Rodriguez",
+                new CreateTransferDto(checkingAccount.getId(),studentCheckingAccount.getId(), "Raquel Rodriguez",
+                        new BigDecimal("100"));
+
+        assertEquals(transfer,transferService.createTransfer(admin,createTransferDto));
+    }
+
+    @Test
+    void createTransferSavingAccountOK() {
+        CreateTransferDto  createTransferDto =
+                new CreateTransferDto(savingsAccount.getId(),studentCheckingAccount.getId(), "Raquel Rodriguez",
+                        new BigDecimal("100"));
+
+        assertEquals(transfer,transferService.createTransfer(admin,createTransferDto));
+    }
+
+    @Test
+    void createTransferCreditCardAccountOK() {
+        CreateTransferDto  createTransferDto =
+                new CreateTransferDto(creditCardAccount.getId(),studentCheckingAccount.getId(), "Raquel Rodriguez",
                         new BigDecimal("100"));
 
         assertEquals(transfer,transferService.createTransfer(admin,createTransferDto));
@@ -167,7 +189,7 @@ class TransferServiceTest {
     @Test
     void createTransferInvalidUserSecurityAccessException() {
         CreateTransferDto  createTransferDto =
-                new CreateTransferDto(1, 2, "Raquel Rodriguez",
+                new CreateTransferDto(checkingAccount.getId(),studentCheckingAccount.getId(), "Raquel Rodriguez",
                         new BigDecimal("100"));
 
         assertThrows(SecurityAccessException.class,() -> transferService.createTransfer(thirdParty,createTransferDto));
@@ -178,13 +200,64 @@ class TransferServiceTest {
         checkingAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
 
         CreateTransferDto  createTransferDto =
-                new CreateTransferDto(1, 2, "Raquel Rodriguez",
+                new CreateTransferDto(checkingAccount.getId(),studentCheckingAccount.getId(),"Raquel Rodriguez",
                         new BigDecimal("100"));
 
         assertThrows(FundsException.class,() ->transferService.createTransfer(admin,createTransferDto));
     }
 
     @Test
-    void createTransaction() {
+    void createTransactionCredit() {
+        checkingAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
+        CreateTransactionDto createTransactionDto =
+                new CreateTransactionDto(checkingAccount.getId(), new BigDecimal("1"), "secretKey", TypeTransaction.CREDIT);
+
+        assertEquals(transfer,transferService.createTransaction(admin,createTransactionDto,""));
     }
+
+    @Test
+    void createTransactionDebit() {
+        checkingAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
+        CreateTransactionDto createTransactionDto =
+                new CreateTransactionDto(checkingAccount.getId(), new BigDecimal("1"), "secretKey", TypeTransaction.DEBIT);
+
+        assertEquals(transfer,transferService.createTransaction(admin,createTransactionDto,""));
+    }
+
+    @Test
+    void createTransactionDebitThirdPartySecurityException() {
+        checkingAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
+        CreateTransactionDto createTransactionDto =
+                new CreateTransactionDto(checkingAccount.getId(), new BigDecimal("1"), "secretKey", TypeTransaction.DEBIT);
+
+        assertThrows(SecurityAccessException.class,() -> transferService.createTransaction(thirdParty,createTransactionDto,""));
+    }
+
+    @Test
+    void createTransactionDebitThirdParty() {
+        checkingAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
+        CreateTransactionDto createTransactionDto =
+                new CreateTransactionDto(checkingAccount.getId(), new BigDecimal("1"), "secretKey", TypeTransaction.DEBIT);
+
+        assertEquals(transfer,transferService.createTransaction(thirdParty,createTransactionDto,"hashKey"));
+    }
+
+    @Test
+    void createTransactionStudentCheckingDebitThirdParty() {
+        studentCheckingAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
+        CreateTransactionDto createTransactionDto =
+                new CreateTransactionDto(studentCheckingAccount.getId(), new BigDecimal("1"), "secretKey", TypeTransaction.DEBIT);
+
+        assertEquals(transfer,transferService.createTransaction(thirdParty,createTransactionDto,"hashKey"));
+    }
+
+    @Test
+    void createTransactionSavingAccountDebitThirdParty() {
+        savingsAccount.getBalance().decreaseAmount(new BigDecimal("1000"));
+        CreateTransactionDto createTransactionDto =
+                new CreateTransactionDto(savingsAccount.getId(), new BigDecimal("1"), "", TypeTransaction.DEBIT);
+
+        assertThrows(SecurityAccessException.class, () -> transferService.createTransaction(thirdParty,createTransactionDto,"hashKey"));
+    }
+
 }

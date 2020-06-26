@@ -4,10 +4,12 @@ import com.ironhack.midtermProject.model.security.AccountHolder;
 import com.ironhack.midtermProject.model.security.Address;
 import com.ironhack.midtermProject.model.security.Admin;
 import com.ironhack.midtermProject.model.security.ThirdParty;
+import com.ironhack.midtermProject.repository.*;
 import com.ironhack.midtermProject.repository.security.AccountHolderRepository;
 import com.ironhack.midtermProject.repository.security.AdminRepository;
 import com.ironhack.midtermProject.repository.security.ThirdPartyRepository;
 import com.ironhack.midtermProject.security.CustomSecurityUser;
+import com.ironhack.midtermProject.service.CheckingAccountService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -35,6 +37,21 @@ class UserDetailsServiceImplTest {
 
     @MockBean
     private ThirdPartyRepository thirdPartyRepository;
+
+    @MockBean
+    private CreditCardAccountRepository creditCardAccountRepository;
+
+    @MockBean
+    private StudentCheckingAccountRepository studentCheckingAccountRepository;
+
+    @MockBean
+    private CheckingAccountRepository checkingAccountRepository;
+
+    @MockBean
+    private TranferRepository tranferRepository;
+
+    @MockBean
+    private SavingsAccountRepository savingsAccountRepository;
 
     private AccountHolder accountHolder;
     private Admin admin;

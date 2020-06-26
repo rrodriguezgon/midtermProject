@@ -47,7 +47,7 @@ public class AccountHolderService {
 
         accountHolder.setPassword(passwordEncoder.encode(accountHolder.getPassword()));
 
-        Set<Role> roles = new HashSet<Role>();
+        HashSet<Role> roles = new HashSet<Role>();
         Role role = new Role("ROLE_HOLDER");
         role.setUser(accountHolder);
 

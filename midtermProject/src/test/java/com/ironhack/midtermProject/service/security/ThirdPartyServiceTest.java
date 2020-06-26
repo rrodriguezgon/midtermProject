@@ -3,6 +3,9 @@ package com.ironhack.midtermProject.service.security;
 import com.ironhack.midtermProject.controller.dto.security.CreateThirdPartyDto;
 import com.ironhack.midtermProject.exception.UserExistException;
 import com.ironhack.midtermProject.model.security.ThirdParty;
+import com.ironhack.midtermProject.repository.*;
+import com.ironhack.midtermProject.repository.security.AccountHolderRepository;
+import com.ironhack.midtermProject.repository.security.AdminRepository;
 import com.ironhack.midtermProject.repository.security.ThirdPartyRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,7 +27,28 @@ class ThirdPartyServiceTest {
     private ThirdPartyService thirdPartyService;
 
     @MockBean
+    private AccountHolderRepository accountHolderRepository;
+
+    @MockBean
+    private AdminRepository adminRepository;
+
+    @MockBean
     private ThirdPartyRepository thirdPartyRepository;
+
+    @MockBean
+    private CreditCardAccountRepository creditCardAccountRepository;
+
+    @MockBean
+    private StudentCheckingAccountRepository studentCheckingAccountRepository;
+
+    @MockBean
+    private CheckingAccountRepository checkingAccountRepository;
+
+    @MockBean
+    private TranferRepository tranferRepository;
+
+    @MockBean
+    private SavingsAccountRepository savingsAccountRepository;
 
     private ThirdParty thirdParty;
 

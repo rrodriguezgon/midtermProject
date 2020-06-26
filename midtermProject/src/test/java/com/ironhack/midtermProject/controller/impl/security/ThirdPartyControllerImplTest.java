@@ -1,14 +1,11 @@
-package com.ironhack.midtermProject.controller.impl;
+package com.ironhack.midtermProject.controller.impl.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ironhack.midtermProject.controller.dto.CreateCheckingAccountDto;
+import com.ironhack.midtermProject.controller.dto.security.CreateAdminDto;
 import com.ironhack.midtermProject.controller.dto.security.CreateThirdPartyDto;
-import com.ironhack.midtermProject.model.entities.Account;
-import com.ironhack.midtermProject.model.entities.CheckingAccount;
-import com.ironhack.midtermProject.model.entities.Money;
+import com.ironhack.midtermProject.model.security.Admin;
 import com.ironhack.midtermProject.model.security.ThirdParty;
-import com.ironhack.midtermProject.model.security.User;
-import com.ironhack.midtermProject.service.CheckingAccountService;
+import com.ironhack.midtermProject.service.security.AdminService;
 import com.ironhack.midtermProject.service.security.ThirdPartyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +18,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
@@ -30,28 +26,27 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @WithMockUser(username = "admin", roles = {"ADMIN"})
-class CheckingAccountControllerImplTest {
-
+class ThirdPartyControllerImplTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
 
     @MockBean
-    private CheckingAccountService checkingAccountService;
+    private ThirdPartyService thirdPartyService;
 
     private MockMvc mockMvc;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    private Account account;
+    private ThirdParty thirdParty;
 
-    private CreateCheckingAccountDto createCheckingAccountDto;
+    private CreateThirdPartyDto createThirdPartyDto;
 
     @BeforeEach
     void setUp() {
@@ -59,36 +54,52 @@ class CheckingAccountControllerImplTest {
                 .webAppContextSetup(webApplicationContext)
                 .apply(springSecurity()).build();
 
-        createCheckingAccountDto = new CreateCheckingAccountDto(new BigDecimal("1"), "secretKey",
-                1, 1);
+        createThirdPartyDto = new CreateThirdPartyDto("name", "password", "hashKey");
 
-        account = new CheckingAccount(new Money(), "secretKey");
-        account.setId(1);
+        thirdParty = new ThirdParty("name", "password", "hashKey");
+        thirdParty.setId(1);
 
-        List<Account> list = Collections.singletonList(account);
+        List<ThirdParty> list = Collections.singletonList(thirdParty);
 
-        when(checkingAccountService.findAll()).thenReturn(list);
-        when(checkingAccountService.findById(any(User.class), eq(account.getId()))).thenReturn(account);
-        when(checkingAccountService.Create(any(CreateCheckingAccountDto.class))).thenReturn(account);
+        when(thirdPartyService.findAll()).thenReturn(list);
+        when(thirdPartyService.findById(thirdParty.getId())).thenReturn(thirdParty);
+        when(thirdPartyService.Create(any(CreateThirdPartyDto.class))).thenReturn(thirdParty);
+        when(thirdPartyService.update(eq(thirdParty.getId()),any(CreateThirdPartyDto.class))).thenReturn(thirdParty);
     }
 
     @Test
     void getAll() throws Exception {
-        mockMvc.perform(get("/checking-accounts"))
-                .andExpect(status().isOk());
+        mockMvc.perform(get("/thirdparties"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value("1"))
+                .andExpect(jsonPath("$[0].username").value("name")) ;
     }
 
     @Test
     void getById() throws Exception {
-        mockMvc.perform(get("/checking-account/1"))
+        mockMvc.perform(get("/thirdarty/1"))
                 .andExpect(status().isOk());
     }
 
     @Test
     void create() throws Exception {
-        mockMvc.perform(post("/checking-account")
-                .content(objectMapper.writeValueAsString(createCheckingAccountDto))
+        mockMvc.perform(post("/thirdarty")
+                .content(objectMapper.writeValueAsString(createThirdPartyDto))
                 .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(status().isCreated());
+    }
+
+    @Test
+    void update() throws Exception {
+        mockMvc.perform(put("/thirdarty/1")
+                .content(objectMapper.writeValueAsString(createThirdPartyDto))
+                .contentType(MediaType.APPLICATION_JSON)
+        ).andExpect(status().isNoContent());
+    }
+
+    @Test
+    void deleteById() throws Exception {
+        mockMvc.perform(delete("/thirdarty/1")
+        ).andExpect(status().isNoContent());
     }
 }
