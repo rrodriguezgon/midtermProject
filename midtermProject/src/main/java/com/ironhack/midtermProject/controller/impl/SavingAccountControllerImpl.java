@@ -1,10 +1,13 @@
 package com.ironhack.midtermProject.controller.impl;
 
 import com.ironhack.midtermProject.controller.dto.CreateSavingAccountDto;
+import com.ironhack.midtermProject.controller.impl.security.AccountHolderControllerImpl;
 import com.ironhack.midtermProject.model.entities.SavingsAccount;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.SavingAccountService;
 import io.swagger.annotations.Api;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -17,6 +20,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class SavingAccountControllerImpl {
+
+    private static final Logger LOGGER = LogManager.getLogger(SavingAccountControllerImpl.class);
+
     @Autowired
     private SavingAccountService savingAccountService;
 

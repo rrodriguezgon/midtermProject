@@ -1,6 +1,7 @@
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.CreateCreditCardAccountDto;
+import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.exception.*;
 import com.ironhack.midtermProject.model.entities.*;
 import com.ironhack.midtermProject.model.security.*;
@@ -8,6 +9,8 @@ import com.ironhack.midtermProject.repository.CreditCardAccountRepository;
 import com.ironhack.midtermProject.repository.security.AccountHolderRepository;
 import com.ironhack.midtermProject.repository.security.AdminRepository;
 import com.ironhack.midtermProject.repository.security.ThirdPartyRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,8 @@ import java.util.List;
 
 @Service
 public class CreditCardAccountService {
+
+    private static final Logger LOGGER = LogManager.getLogger(CreditCardAccountService.class);
 
     @Autowired
     private CreditCardAccountRepository creditCardAccountRepository;
@@ -63,7 +68,9 @@ public class CreditCardAccountService {
         CreditCardAccount creditCardAccount = creditCardAccountRepository.findById(id).orElseThrow(() -> new DataNotFoundException("this creditCardAccount Id not Found."));
 
         if (!checkPermissions(creditCardAccount, user)){
-            throw new SecurityAccessException("This user not have permission about this Account");
+            SecurityAccessException ex = new SecurityAccessException("This user not have permission about this Account");
+            LOGGER.error("user Name: " + user.getUsername(),ex);
+            throw ex;
         }
 
         int[] calcTime = calcularXMes(creditCardAccount.getUpdatedAt());

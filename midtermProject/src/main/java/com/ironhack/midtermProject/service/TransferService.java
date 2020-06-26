@@ -1,6 +1,7 @@
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.*;
+import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.enums.StatusAccount;
 import com.ironhack.midtermProject.exception.*;
 import com.ironhack.midtermProject.model.entities.*;
@@ -9,6 +10,8 @@ import com.ironhack.midtermProject.repository.*;
 import com.ironhack.midtermProject.repository.security.AccountHolderRepository;
 import com.ironhack.midtermProject.repository.security.AdminRepository;
 import com.ironhack.midtermProject.repository.security.ThirdPartyRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +23,8 @@ import java.util.Optional;
 
 @Service
 public class TransferService {
+
+    private static final Logger LOGGER = LogManager.getLogger(TransferService.class);
 
     @Autowired
     private CheckingAccountRepository checkingAccountRepository;
@@ -68,7 +73,9 @@ public class TransferService {
         BigDecimal calcAmount = accountEmitter.getBalance().getAmount().subtract(createTransferDto.getAmount());
 
         if (calcAmount.signum() == -1){
-            throw new FundsException("Insufficient funds");
+            FundsException ex = new FundsException("Insufficient funds");
+            LOGGER.error("Account Emitter Id: " + accountEmitter.getId() + " - Account balance: " + accountEmitter.getBalance().getAmount() + " - Import Transfer: " + createTransferDto.getAmount(),ex);
+            throw ex;
         }
 
         accountEmitter.getBalance().decreaseAmount(createTransferDto.getAmount());
@@ -121,28 +128,36 @@ public class TransferService {
 
     private void checkPermissionsTransaction(ThirdParty user, CreateTransactionDto createTransactionDto, String hashKey, Account account) {
         Boolean checked = false;
+        String secretKeyAccount = "";
 
         checked = user.getHashKey().equals(hashKey);
 
         if (!checked){
-            throw new SecurityAccessException("This haskey not is valid.");
+            SecurityAccessException ex = new SecurityAccessException("This haskey not is valid.");
+            LOGGER.error("ThirdParty user Id: " + user.getId() + " - Param hashKey: " + hashKey + " - ThirdParty hashKey: " + user.getHashKey(),ex);
+            throw ex;
         }
 
         if (account instanceof AccountKey) {
             if (checked && account instanceof StudentCheckingAccount) {
-                checked = ((StudentCheckingAccount) account).getSecretKey().equals(createTransactionDto.getSecretKey())
+                secretKeyAccount = ((StudentCheckingAccount) account).getSecretKey();
+                checked = secretKeyAccount.equals(createTransactionDto.getSecretKey())
                         && ((StudentCheckingAccount) account).getStatus() == StatusAccount.ACTIVE;
             } else if (checked && account instanceof SavingsAccount) {
-                checked = ((SavingsAccount) account).getSecretKey().equals(createTransactionDto.getSecretKey())
+                secretKeyAccount = ((SavingsAccount) account).getSecretKey();
+                checked = secretKeyAccount.equals(createTransactionDto.getSecretKey())
                         && ((SavingsAccount) account).getStatus() == StatusAccount.ACTIVE;
             } else if (checked && account instanceof CheckingAccount) {
-                checked = ((CheckingAccount) account).getSecretKey().equals(createTransactionDto.getSecretKey())
+                secretKeyAccount = ((CheckingAccount) account).getSecretKey();
+                checked = secretKeyAccount.equals(createTransactionDto.getSecretKey())
                         && ((CheckingAccount) account).getStatus() == StatusAccount.ACTIVE;
             }
         }
 
         if (!checked){
-            throw new SecurityAccessException("This secretKey receiver not is valid.");
+            SecurityAccessException ex = new SecurityAccessException("This secretKey receiver not is valid.");
+            LOGGER.error("ThirdParty user Id: " + user.getId() + " - Param secretKey: " + createTransactionDto.getSecretKey() + " - Account secretKey: " + secretKeyAccount,ex);
+            throw ex;
         }
     }
 
@@ -188,24 +203,31 @@ public class TransferService {
     private void checkPermissionsTransfer(Account accountEmitter, Account accountReceiver, User user, String accountReceiverName) {
         Boolean check = false;
 
+        User userPrimaryuserAccount = null;
+        User userSeconduserAccount = null;
+
         // region checkEmmiter
         if ((user instanceof Admin) == false) {
-            User primaryuserAccount = accountEmitter.getPrimaryOwner();
-            User seconduserAccount = accountEmitter.getSecondaryOwner();
+            userPrimaryuserAccount = accountEmitter.getPrimaryOwner();
+            userSeconduserAccount = accountEmitter.getSecondaryOwner();
 
-            if (primaryuserAccount != null){
-                check = user.getId() == primaryuserAccount.getId();
+            if (userPrimaryuserAccount != null){
+                check = user.getId() == userPrimaryuserAccount.getId();
             }
 
-            if (!check && seconduserAccount != null){
-                check = user.getId() == seconduserAccount.getId();
+            if (!check && userSeconduserAccount != null){
+                check = user.getId() == userSeconduserAccount.getId();
             }
         } else {
             check = true;
         }
 
         if (!check){
-            throw new SecurityAccessException("This user not have permission about this Account");
+            SecurityAccessException ex = new SecurityAccessException("This user not have permission about this Account");
+            LOGGER.error("user Id: " + user.getId()
+                    + ((userPrimaryuserAccount != null) ? " - userPrimaryuserAccount Id: " + userPrimaryuserAccount.getId() : "")
+                    + ((userSeconduserAccount != null) ? " - userSeconduserAccount Id: " + userSeconduserAccount.getId() : ""));
+            throw ex;
         }
         // endregion
 
@@ -225,7 +247,12 @@ public class TransferService {
         }
 
         if (!check){
-            throw new SecurityAccessException("This name receiver not is equals to name AccountReceiver.");
+            SecurityAccessException ex = new SecurityAccessException("This name receiver not is equals to name AccountReceiver.");
+            LOGGER.error("Account Receiver Name: " + accountReceiverName
+                    + ((primaryuserAccount != null) ? " - primaryuserAccount Name: " + primaryuserAccount.getFirstAndLastnName() : "")
+                    + ((seconduserAccount != null) ? " - seconduserAccount Name: " + seconduserAccount.getFirstAndLastnName() : ""));
+
+            throw ex;
         }
         // endregion
 
@@ -383,19 +410,22 @@ public class TransferService {
             if(account instanceof AccountKey){
                 ((AccountKey)account).setStatus(StatusAccount.FROZEN);
             }
-            throw new FraudException("Your number Transactions of day is greater than normal transactions");
+
+            FraudException ex = new FraudException("Your number Transactions of day is greater than normal transactions");
+            LOGGER.error("numberTransactionsAccountDay " + numberTransactionsAccountDay + " - maxTransactionsAccount " + maxTransactionsAccount,ex);
+            throw ex;
         }
 
         if (numberTransactionsAccountSecond != null && numberTransactionsAccountSecond == 2){
             if(account instanceof AccountKey){
                 ((AccountKey)account).setStatus(StatusAccount.FROZEN);
             }
-            throw new FraudException("Your number Transactions of second is greater than normal transactions");
+
+            FraudException ex = new FraudException("Your number Transactions of second is greater than normal transactions");
+            LOGGER.error("numberTransactionsAccountSecond " + numberTransactionsAccountSecond,ex);
+            throw ex;
         }
     }
-
-    // numero transa de hoy * 150% > numero maximo de trans total de dias  KO = CUENTA EMISOR BLOQUEAR < OK
-    // MIRAR EL NUMERO DE TRANSACCIONES EN ESE SEGUNDO Y SI ES > 2 KO = CUENTA EMISOR BLOQIEAR
 
     private Integer getMaxTransactionsAccount(Integer accountId){
         return transferRepository.getMaxTransactionsAccount(accountId);

@@ -1,14 +1,19 @@
 package com.ironhack.midtermProject.service.security;
 
+import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.repository.security.*;
 import com.ironhack.midtermProject.security.CustomSecurityUser;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+
+    private static final Logger LOGGER = LogManager.getLogger(UserDetailsServiceImpl.class);
 
     @Autowired
     private AccountHolderRepository accountHolderRepository;
@@ -37,7 +42,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             }
 
             if (user == null) {
-                throw new UsernameNotFoundException("Invalid username/password combination.");
+                UsernameNotFoundException ex = new UsernameNotFoundException("Invalid username/password combination.");
+                LOGGER.error("username: " + username,ex);
+                throw ex;
             }
 
             return new CustomSecurityUser(user);

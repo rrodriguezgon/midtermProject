@@ -2,10 +2,13 @@ package com.ironhack.midtermProject.service.security;
 
 import com.ironhack.midtermProject.controller.dto.security.CreateAccountHolderDto;
 import com.ironhack.midtermProject.controller.dto.security.UpdateAccountHolderDto;
+import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.exception.*;
 import com.ironhack.midtermProject.model.security.*;
 import com.ironhack.midtermProject.repository.security.AccountHolderRepository;
 import com.ironhack.midtermProject.repository.security.AdminRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,6 +20,8 @@ import java.util.Set;
 
 @Service
 public class AccountHolderService {
+
+    private static final Logger LOGGER = LogManager.getLogger(AccountHolderService.class);
 
     @Autowired
     private AccountHolderRepository accountHolderRepository;
@@ -32,7 +37,10 @@ public class AccountHolderService {
         AccountHolder user = accountHolderRepository.findByUsername(createAccountHolderDto.getUsername());
 
         if (user != null){
-            throw new UserExistException("This user exists.");
+            UserExistException ex = new UserExistException("This user exists.");
+            LOGGER.error("username: " + createAccountHolderDto.getUsername(),ex);
+
+            throw ex;
         }
 
         AccountHolder accountHolder = new AccountHolder(createAccountHolderDto.getUsername(),

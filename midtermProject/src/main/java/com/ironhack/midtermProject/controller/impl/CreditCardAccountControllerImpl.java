@@ -1,11 +1,14 @@
 package com.ironhack.midtermProject.controller.impl;
 
 import com.ironhack.midtermProject.controller.dto.CreateCreditCardAccountDto;
+import com.ironhack.midtermProject.controller.impl.security.AccountHolderControllerImpl;
 import com.ironhack.midtermProject.controller.interfaces.CreditCardAccountController;
 import com.ironhack.midtermProject.model.entities.CreditCardAccount;
 import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.CreditCardAccountService;
 import io.swagger.annotations.Api;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -18,6 +21,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class CreditCardAccountControllerImpl implements CreditCardAccountController {
+
+    private static final Logger LOGGER = LogManager.getLogger(CreditCardAccountControllerImpl.class);
 
     @Autowired
     private CreditCardAccountService creditCardAccountService;

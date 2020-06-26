@@ -1,6 +1,7 @@
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.CreateSavingAccountDto;
+import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.exception.*;
 import com.ironhack.midtermProject.model.entities.*;
 import com.ironhack.midtermProject.model.security.*;
@@ -8,6 +9,8 @@ import com.ironhack.midtermProject.repository.SavingsAccountRepository;
 import com.ironhack.midtermProject.repository.security.AccountHolderRepository;
 import com.ironhack.midtermProject.repository.security.AdminRepository;
 import com.ironhack.midtermProject.repository.security.ThirdPartyRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +22,8 @@ import java.util.List;
 
 @Service
 public class SavingAccountService {
+
+    private static final Logger LOGGER = LogManager.getLogger(SavingAccountService.class);
 
     @Autowired
     private SavingsAccountRepository savingsAccountRepository;
@@ -62,7 +67,9 @@ public class SavingAccountService {
         SavingsAccount savingsAccount = savingsAccountRepository.findById(id).orElseThrow(() -> new DataNotFoundException("this savingAccount Id not Found."));
 
         if (!checkPermissions(savingsAccount, user)){
-            throw new SecurityAccessException("This user not have permission about this Account");
+            SecurityAccessException ex = new SecurityAccessException("This user not have permission about this Account");
+            LOGGER.error("user Name: " + user.getUsername(),ex);
+            throw ex;
         }
 
         int[] calcTime = calcularXAño(savingsAccount.getUpdatedAt());

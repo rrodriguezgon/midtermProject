@@ -8,6 +8,8 @@ import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.security.AccountHolderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -20,6 +22,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class AccountHolderControllerImpl implements AccountHolderController {
+
+    private static final Logger LOGGER = LogManager.getLogger(AccountHolderControllerImpl.class);
 
     @Autowired
     private AccountHolderService accountHolderService;

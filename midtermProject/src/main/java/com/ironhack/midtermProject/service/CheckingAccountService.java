@@ -1,11 +1,14 @@
 package com.ironhack.midtermProject.service;
 
 import com.ironhack.midtermProject.controller.dto.CreateCheckingAccountDto;
+import com.ironhack.midtermProject.controller.impl.TransferControllerImpl;
 import com.ironhack.midtermProject.exception.*;
 import com.ironhack.midtermProject.model.entities.*;
 import com.ironhack.midtermProject.model.security.*;
 import com.ironhack.midtermProject.repository.*;
 import com.ironhack.midtermProject.repository.security.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +20,8 @@ import java.util.Optional;
 
 @Service
 public class CheckingAccountService {
+
+    private static final Logger LOGGER = LogManager.getLogger(CheckingAccountService.class);
 
     @Autowired
     private CheckingAccountRepository checkingAccountRepository;
@@ -88,7 +93,9 @@ public class CheckingAccountService {
         }
 
         if (!checkPermissions(account, user)){
-            throw new SecurityAccessException("This user not have permission about this Account");
+            SecurityAccessException ex = new SecurityAccessException("This user not have permission about this Account");
+            LOGGER.error("user Name: " + user.getUsername(),ex);
+            throw ex;
         }
 
         return account;
