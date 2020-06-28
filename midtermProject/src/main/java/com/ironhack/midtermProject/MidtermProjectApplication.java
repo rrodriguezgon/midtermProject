@@ -61,14 +61,17 @@ public class MidtermProjectApplication  implements ApplicationRunner {
 	 */
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		env.getProperty("spring.datasource.url");
 		String aSQLScriptFilePath = "./src/main/resources/populate.sql";
+		Connection con = null;
+		try {
+		env.getProperty("spring.datasource.url");
+
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection(
+		con = DriverManager.getConnection(
 				env.getProperty("spring.datasource.url"),
 				env.getProperty("spring.datasource.username"),
 				env.getProperty("spring.datasource.password"));
-		try {
+
 			ScriptRunner scriptRunner = new ScriptRunner(con);
 			Reader reader = new BufferedReader(
 					new FileReader(aSQLScriptFilePath));
@@ -76,6 +79,10 @@ public class MidtermProjectApplication  implements ApplicationRunner {
 		} catch (Exception e) {
 			System.err.println("Failed to Execute" + aSQLScriptFilePath
 					+ " The error is " + e.getMessage());
+		} finally {
+			if (con != null){
+				con.close();
+			}
 		}
 	}
 }

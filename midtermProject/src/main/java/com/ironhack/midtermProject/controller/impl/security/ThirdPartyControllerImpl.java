@@ -8,7 +8,6 @@ import com.ironhack.midtermProject.controller.interfaces.security.ThirdPartyCont
 import com.ironhack.midtermProject.model.security.ThirdParty;
 import com.ironhack.midtermProject.service.security.ThirdPartyService;
 import io.swagger.annotations.*;
-import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +22,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class ThirdPartyControllerImpl implements ThirdPartyController {
-
-    private static final Logger LOGGER = LogManager.getLogger(ThirdPartyControllerImpl.class);
 
     @Autowired
     private ThirdPartyService thirdPartyService;

@@ -153,13 +153,6 @@ class TransferServiceTest {
     }
 
     @Test
-    void findAlllByUserId() {
-        int size = 1;
-
-        assertEquals(size, transferService.findAlllByUserId(1).size());
-    }
-
-    @Test
     void createTransferOK() {
         CreateTransferDto  createTransferDto =
                 new CreateTransferDto(checkingAccount.getId(),studentCheckingAccount.getId(), "Raquel Rodriguez",

@@ -7,7 +7,7 @@ import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 /**
- *
+ * CreateCreditCardAccountDto Class
  */
 public class CreateCreditCardAccountDto {
 
@@ -28,17 +28,17 @@ public class CreateCreditCardAccountDto {
     private Integer secondaryOwnerId;
 
     /**
-     *
+     * Default Constructor CreateCreditCardAccountDto.
      */
     public CreateCreditCardAccountDto(){}
 
     /**
-     *
-     * @param creditLimit
-     * @param interestRate
-     * @param balance
-     * @param primaryOwnerId
-     * @param secondaryOwnerId
+     * Constructor CreateCreditCardAccountDto.
+     * @param creditLimit creditLimit of Account
+     * @param interestRate interestRate of Account
+     * @param balance balance of Account
+     * @param primaryOwnerId Primary Owner Id of Account
+     * @param secondaryOwnerId Secondary Owner Id of Account
      */
     public CreateCreditCardAccountDto(BigDecimal creditLimit, BigDecimal interestRate, BigDecimal balance,
                                       Integer primaryOwnerId,Integer secondaryOwnerId) {
@@ -50,80 +50,80 @@ public class CreateCreditCardAccountDto {
     }
 
     /**
-     *
-     * @return
+     * Getter creditLimit of Account
+     * @return creditLimit of Account
      */
     public BigDecimal getCreditLimit() {
         return creditLimit;
     }
 
     /**
-     *
-     * @param creditLimit
+     * Setter creditLimit of Account
+     * @param creditLimit creditLimit of Account
      */
     public void setCreditLimit(BigDecimal creditLimit) {
         this.creditLimit = creditLimit;
     }
 
     /**
-     *
-     * @return
+     * Getter interestRate of Account
+     * @return interestRate of Account
      */
     public BigDecimal getInterestRate() {
         return interestRate;
     }
 
     /**
-     *
-     * @param interestRate
+     * Setter interestRate of Account
+     * @param interestRate interestRate of Account
      */
     public void setInterestRate(BigDecimal interestRate) {
         this.interestRate = interestRate;
     }
 
     /**
-     *
-     * @return
+     * Getter balance of Account
+     * @return balance of Account
      */
     public BigDecimal getBalance() {
         return balance;
     }
 
     /**
-     *
-     * @param balance
+     * Setter balance of Account
+     * @param balance balance of Account
      */
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
     /**
-     *
-     * @return
+     * Getter Primary Owner Id of Account
+     * @return Primary Owner Id of Account
      */
     public Integer getPrimaryOwnerId() {
         return primaryOwnerId;
     }
 
     /**
-     *
-     * @param primaryOwnerId
+     * Setter Primary Owner Id of Account
+     * @param primaryOwnerId Primary Owner Id of Account
      */
     public void setPrimaryOwnerId(Integer primaryOwnerId) {
         this.primaryOwnerId = primaryOwnerId;
     }
 
     /**
-     *
-     * @return
+     * Getter Secondary Owner Id of Account
+     * @return Secondary Owner Id of Account
      */
     public Integer getSecondaryOwnerId() {
         return secondaryOwnerId;
     }
 
     /**
-     *
-     * @param secondaryOwnerId
+     * Setter Secondary Owner Id of Account
+     * @param secondaryOwnerId Secondary Owner Id of Account
      */
     public void setSecondaryOwnerId(Integer secondaryOwnerId) {
         this.secondaryOwnerId = secondaryOwnerId;

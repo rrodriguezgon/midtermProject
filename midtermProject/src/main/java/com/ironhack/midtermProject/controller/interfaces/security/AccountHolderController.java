@@ -17,7 +17,7 @@ public interface AccountHolderController {
 
     /**
      * Get All AccountHolders
-     * @return List<AccountHolder> Display all account holders
+     * @return Display all account holders
      */
     public List<AccountHolder> getAll();
 

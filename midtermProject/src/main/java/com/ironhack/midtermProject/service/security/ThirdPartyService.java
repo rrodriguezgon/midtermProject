@@ -48,15 +48,15 @@ public class ThirdPartyService {
      * @return
      */
     public ThirdParty Create(CreateThirdPartyDto createThirdPartyDto){
-        ThirdParty user = thirdPartyRepository.findByUsername(createThirdPartyDto.getName());
+        ThirdParty user = thirdPartyRepository.findByUsername(createThirdPartyDto.getUserName());
 
         if (user != null){
             UserExistException ex = new UserExistException("This user exists.");
-            LOGGER.error("username: " + createThirdPartyDto.getName(),ex);
+            LOGGER.error("username: " + createThirdPartyDto.getUserName(),ex);
             throw ex;
         }
 
-        ThirdParty thirdParty = new ThirdParty(createThirdPartyDto.getName(),
+        ThirdParty thirdParty = new ThirdParty(createThirdPartyDto.getUserName(),
                 createThirdPartyDto.getPassword(),createThirdPartyDto.getHashKey());
 
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -93,7 +93,7 @@ public class ThirdPartyService {
 
         thirdPartyFound.setHashKey(createThirdPartyDto.getHashKey());
         thirdPartyFound.setPassword(passwordEncoder.encode(createThirdPartyDto.getPassword()));
-        thirdPartyFound.setUsername(createThirdPartyDto.getName());
+        thirdPartyFound.setUsername(createThirdPartyDto.getUserName());
 
         return thirdPartyRepository.save(thirdPartyFound);
     }

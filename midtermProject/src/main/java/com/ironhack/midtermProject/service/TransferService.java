@@ -483,24 +483,26 @@ public class TransferService {
         double maxTransactionsAccount = getMaxTransactionsAccount(account.getId()) * 1.5;
         Integer numberTransactionsAccountDay = getNumberTransactionsAccountDay(account.getId());
         Integer numberTransactionsAccountSecond = getNumberTransactionsAccountSecond(account.getId());
-        if (numberTransactionsAccountDay > maxTransactionsAccount){
-            if(account instanceof AccountKey){
-                ((AccountKey)account).setStatus(StatusAccount.FROZEN);
+        if(numberTransactionsAccountDay != 0 || numberTransactionsAccountSecond != 0 || maxTransactionsAccount != 0) {
+            if (numberTransactionsAccountDay > maxTransactionsAccount) {
+                if (account instanceof AccountKey) {
+                    ((AccountKey) account).setStatus(StatusAccount.FROZEN);
+                }
+
+                FraudException ex = new FraudException("Your number Transactions of day is greater than normal transactions");
+                LOGGER.error("numberTransactionsAccountDay " + numberTransactionsAccountDay + " - maxTransactionsAccount " + maxTransactionsAccount, ex);
+                throw ex;
             }
 
-            FraudException ex = new FraudException("Your number Transactions of day is greater than normal transactions");
-            LOGGER.error("numberTransactionsAccountDay " + numberTransactionsAccountDay + " - maxTransactionsAccount " + maxTransactionsAccount,ex);
-            throw ex;
-        }
+            if (numberTransactionsAccountSecond != null && numberTransactionsAccountSecond == 2) {
+                if (account instanceof AccountKey) {
+                    ((AccountKey) account).setStatus(StatusAccount.FROZEN);
+                }
 
-        if (numberTransactionsAccountSecond != null && numberTransactionsAccountSecond == 2){
-            if(account instanceof AccountKey){
-                ((AccountKey)account).setStatus(StatusAccount.FROZEN);
+                FraudException ex = new FraudException("Your number Transactions of second is greater than normal transactions");
+                LOGGER.error("numberTransactionsAccountSecond " + numberTransactionsAccountSecond, ex);
+                throw ex;
             }
-
-            FraudException ex = new FraudException("Your number Transactions of second is greater than normal transactions");
-            LOGGER.error("numberTransactionsAccountSecond " + numberTransactionsAccountSecond,ex);
-            throw ex;
         }
     }
 

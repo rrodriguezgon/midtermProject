@@ -38,4 +38,9 @@ class GlobalHandlerTest {
     void handleFraudException() {
             assertThrows(Exception.class, () ->  globalHandler.handleFraudException(new FraudException("Not found."), null));
     }
+
+    @Test
+    void handleResetDataException() {
+        assertThrows(Exception.class, () ->  globalHandler.handleResetDataException(new ResetDataException("Not found."), null));
+    }
 }

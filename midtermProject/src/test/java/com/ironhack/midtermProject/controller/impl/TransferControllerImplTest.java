@@ -68,7 +68,6 @@ class TransferControllerImplTest {
         List<Transfer> list = Collections.singletonList(transfer);
 
         when(transferService.findAll()).thenReturn(list);
-        when(transferService.findAlllByUserId(1)).thenReturn(list);
         when(transferService.createTransfer(any(User.class), any(CreateTransferDto.class))).thenReturn(transfer);
         when(transferService.createTransaction(any(User.class), any(CreateTransactionDto.class),eq("hashkey"))).thenReturn(transfer);
     }

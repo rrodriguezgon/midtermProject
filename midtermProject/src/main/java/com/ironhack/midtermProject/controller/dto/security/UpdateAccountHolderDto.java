@@ -11,7 +11,7 @@ import javax.validation.constraints.Past;
 import java.time.LocalDate;
 
 /**
- *
+ * UpdateAccountHolderDto Class
  */
 public class UpdateAccountHolderDto {
 
@@ -30,17 +30,17 @@ public class UpdateAccountHolderDto {
     String mailingAddress;
 
     /**
-     *
+     * Default Constructor UpdateAccountHolderDto.
       */
     public UpdateAccountHolderDto(){}
 
     /**
-     *
-     * @param firstName
-     * @param lastName
-     * @param birthday
-     * @param primaryAddress
-     * @param mailingAddress
+     * Constructor UpdateAccountHolderDto
+     * @param firstName firstName of Account Holder
+     * @param lastName lastName of Account Holder
+     * @param birthday birthday of Account Holder
+     * @param primaryAddress primaryAddress of Account Holder
+     * @param mailingAddress mailingAddress of Account Holder
      */
     public UpdateAccountHolderDto(String firstName, String lastName,
                                   LocalDate birthday, Address primaryAddress, String mailingAddress) {
@@ -52,80 +52,80 @@ public class UpdateAccountHolderDto {
     }
 
     /**
-     *
-     * @return
+     * Getter firstName of Account Holder
+     * @return firstName of Account Holder
      */
     public String getFirstName() {
         return firstName;
     }
 
     /**
-     *
-     * @param firstName
+     * Setter firstName of Account Holder
+     * @param firstName firstName of Account Holder
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
     /**
-     *
-     * @return
+     * Getter lastName of Account Holder
+     * @return lastName of Account Holder
      */
     public String getLastName() {
         return lastName;
     }
 
     /**
-     *
-     * @param lastName
+     * Setter lastName of Account Holder
+     * @param lastName lastName of Account Holder
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
     /**
-     *
-     * @return
+     * Getter birthday of Account Holder
+     * @return birthday of Account Holder
      */
     public LocalDate getBirthday() {
         return birthday;
     }
 
     /**
-     *
-     * @param birthday
+     * Setter birthday of Account Holder
+     * @param birthday birthday of Account Holder
      */
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
     /**
-     *
-     * @return
+     * Getter primaryAddress of Account Holder
+     * @return primaryAddress of Account Holder
      */
     public Address getPrimaryAddress() {
         return primaryAddress;
     }
 
     /**
-     *
-     * @param primaryAddress
+     * Setter primaryAddress of Account Holder
+     * @param primaryAddress primaryAddress of Account Holder
      */
     public void setPrimaryAddress(Address primaryAddress) {
         this.primaryAddress = primaryAddress;
     }
 
     /**
-     *
-     * @return
+     * Getter mailingAddress of Account Holder
+     * @return mailingAddress of Account Holder
      */
     public String getMailingAddress() {
         return mailingAddress;
     }
 
     /**
-     *
-     * @param mailingAddress
+     * Setter mailingAddress of Account Holder
+     * @param mailingAddress mailingAddress of Account Holder
      */
     public void setMailingAddress(String mailingAddress) {
         this.mailingAddress = mailingAddress;

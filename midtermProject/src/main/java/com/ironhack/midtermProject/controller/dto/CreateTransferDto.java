@@ -1,5 +1,5 @@
 /**
- *
+ * com.ironhack.midtermProject.controller.dto
  */
 package com.ironhack.midtermProject.controller.dto;
 
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 /**
- *
+ * CreateTransferDto Class
  */
 public class CreateTransferDto {
 
@@ -25,16 +25,16 @@ public class CreateTransferDto {
     private BigDecimal amount;
 
     /**
-     *
+     * Default Constructor CreateTransferDto.
      */
     public CreateTransferDto(){}
 
     /**
-     *
-     * @param emitterAccountId
-     * @param receiverAccountId
-     * @param receiverAccountName
-     * @param amount
+     * Constructor CreateTransferDto.
+     * @param emitterAccountId Account Emitter Id of Transference
+     * @param receiverAccountId Account Receiver Id of Transference
+     * @param receiverAccountName Account Receiver Name of Transference
+     * @param amount Amount of Transference
      */
     public CreateTransferDto(Integer emitterAccountId, Integer receiverAccountId, String receiverAccountName, BigDecimal amount) {
         this.emitterAccountId = emitterAccountId;
@@ -44,64 +44,64 @@ public class CreateTransferDto {
     }
 
     /**
-     *
-     * @return
+     * Getter Account Emitter Id of Transference
+     * @return Account Emitter Id of Transference
      */
     public Integer getEmitterAccountId() {
         return emitterAccountId;
     }
 
     /**
-     *
-     * @param emitterAccountId
+     * Setter Account Emitter Id of Transference
+     * @param emitterAccountId Account Emitter Id of Transference
      */
     public void setEmitterAccountId(Integer emitterAccountId) {
         this.emitterAccountId = emitterAccountId;
     }
 
     /**
-     *
-     * @return
+     * Getter Account Receiver Id of Transference
+     * @return Account Receiver Id of Transference
      */
     public Integer getReceiverAccountId() {
         return receiverAccountId;
     }
 
     /**
-     *
-     * @param receiverAccountId
+     * Setter Account Receiver Id of Transference
+     * @param receiverAccountId Account Receiver Id of Transference
      */
     public void setReceiverAccountId(Integer receiverAccountId) {
         this.receiverAccountId = receiverAccountId;
     }
 
     /**
-     *
-     * @return
+     * Getter Account Receiver Name of Transference
+     * @return Account Receiver Name of Transference
      */
     public String getReceiverAccountName() {
         return receiverAccountName;
     }
 
     /**
-     *
-     * @param receiverAccountName
+     * Setter Account Receiver Name of Transference
+     * @param receiverAccountName Account Receiver Name of Transference
      */
     public void setReceiverAccountName(String receiverAccountName) {
         this.receiverAccountName = receiverAccountName;
     }
 
     /**
-     *
-     * @return
+     * Getter amount of Transference
+     * @return amount of Transference
      */
     public BigDecimal getAmount() {
         return amount;
     }
 
     /**
-     *
-     * @param amount
+     * Setter amount of Transference
+     * @param amount amount of Transference
      */
     public void setAmount(BigDecimal amount) {
         this.amount = amount;

@@ -18,9 +18,9 @@ class CreateThirdPartyDtoTest {
     @Test
     void getUsername() {
         String param = "username";
-        createThirdPartyDto.setName(param);
+        createThirdPartyDto.setUserName(param);
 
-        assertEquals(param, createThirdPartyDto.getName());
+        assertEquals(param, createThirdPartyDto.getUserName());
     }
 
     @Test

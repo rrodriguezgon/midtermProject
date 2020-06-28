@@ -1,5 +1,5 @@
 /**
- *
+ * com.ironhack.midtermProject.controller.dto
  */
 package com.ironhack.midtermProject.controller.dto;
 
@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 /**
- *
+ * CreateSavingAccountDto Class
  */
 public class CreateSavingAccountDto {
 
@@ -29,17 +29,17 @@ public class CreateSavingAccountDto {
     private Integer secondaryOwnerId;
 
     /**
-     *
+     * Default Constructor CreateSavingAccountDto.
      */
     public CreateSavingAccountDto(){}
 
     /**
-     *
-     * @param interestRate
-     * @param balance
-     * @param secretKey
-     * @param primaryOwnerId
-     * @param secondaryOwnerId
+     * Constructor CreateSavingAccountDto
+     * @param interestRate interestRate of Account
+     * @param balance balance of Account
+     * @param secretKey secretKey of Account
+     * @param primaryOwnerId Primary Owner Id of Account
+     * @param secondaryOwnerId Secondary Owner Id of Account
      */
     public CreateSavingAccountDto(BigDecimal interestRate, BigDecimal balance, String secretKey,
                                    Integer primaryOwnerId, Integer secondaryOwnerId) {
@@ -51,80 +51,80 @@ public class CreateSavingAccountDto {
     }
 
     /**
-     *
-     * @return
+     * Getter balance of Account
+     * @return balance of Account
      */
     public BigDecimal getBalance() {
         return balance;
     }
 
     /**
-     *
-     * @param balance
+     * Setter balance of Account
+     * @param balance balance of Account
      */
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
     /**
-     *
-     * @return
+     * Getter secretKey of Account
+     * @return secretKey of Account
      */
     public String getSecretKey() {
         return secretKey;
     }
 
     /**
-     *
-     * @param secretKey
+     * Setter secretKey of Account
+     * @param secretKey secretKey of Account
      */
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
 
     /**
-     *
-     * @return
+     * Getter interestRate of Account
+     * @return interestRate of Account
      */
     public BigDecimal getInterestRate() {
         return interestRate;
     }
 
     /**
-     *
-     * @param interestRate
+     * Setter interestRate of Account
+     * @param interestRate interestRate of Account
      */
     public void setInterestRate(BigDecimal interestRate) {
         this.interestRate = interestRate;
     }
 
     /**
-     *
-     * @return
+     * Getter Primary Owner Id of Account
+     * @return Primary Owner Id of Account
      */
     public Integer getPrimaryOwnerId() {
         return primaryOwnerId;
     }
 
     /**
-     *
-     * @param primaryOwnerId
+     * Setter Primary Owner Id of Account
+     * @param primaryOwnerId Primary Owner Id of Account
      */
     public void setPrimaryOwnerId(Integer primaryOwnerId) {
         this.primaryOwnerId = primaryOwnerId;
     }
 
     /**
-     *
-     * @return
+     * Getter Secondary Owner Id of Account
+     * @return Secondary Owner Id of Account
      */
     public Integer getSecondaryOwnerId() {
         return secondaryOwnerId;
     }
 
     /**
-     *
-     * @param secondaryOwnerId
+     * Setter Secondary Owner Id of Account
+     * @param secondaryOwnerId Secondary Owner Id of Account
      */
     public void setSecondaryOwnerId(Integer secondaryOwnerId) {
         this.secondaryOwnerId = secondaryOwnerId;

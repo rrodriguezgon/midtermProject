@@ -6,76 +6,76 @@ package com.ironhack.midtermProject.controller.dto.security;
 import javax.validation.constraints.NotEmpty;
 
 /**
- *
+ * CreateThirdPartyDto Class
  */
 public class CreateThirdPartyDto {
-    @NotEmpty(message = "Name cannot be empty")
-    String name;
+    @NotEmpty(message = "UserName cannot be empty")
+    String username;
     @NotEmpty(message = "Password cannot be empty")
     String password;
     @NotEmpty(message = "HashKey cannot be empty")
     String hashKey;
 
     /**
-     *
+     * Default Constuctor CreateThirdPartyDto.
      */
     public CreateThirdPartyDto(){}
 
     /**
-     *
-     * @param name
-     * @param password
+     * Constructor CreateThirdPartyDto.
+     * @param username username ThirdParty.
+     * @param password password ThirdParty.
      * @param hashKey
      */
-    public CreateThirdPartyDto(String name, String password, String hashKey) {
-        this.name = name;
+    public CreateThirdPartyDto(String username, String password, String hashKey) {
+        this.username = username;
         this.password = password;
         this.hashKey = hashKey;
     }
 
     /**
-     *
-     * @return
+     * Getter username ThirdParty
+     * @return username ThirdParty
      */
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return username;
     }
 
     /**
-     *
-     * @param name
+     * Setter username ThirdParty
+     * @param username username ThirdParty
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String username) {
+        this.username = username;
     }
 
     /**
-     *
-     * @return
+     * Getter password ThirdParty
+     * @return password ThirdParty
      */
     public String getPassword() {
         return password;
     }
 
     /**
-     *
-     * @param password
+     * Setter password ThirdParty
+     * @param password password ThirdParty
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
-     *
-     * @return
+     * Getter hashKey ThirdParty
+     * @return hashKey ThirdParty
      */
     public String getHashKey() {
         return hashKey;
     }
 
     /**
-     *
-     * @param hashKey
+     * Setter hashKey ThirdParty
+     * @param hashKey hashKey ThirdParty
      */
     public void setHashKey(String hashKey) {
         this.hashKey = hashKey;

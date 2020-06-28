@@ -1,5 +1,5 @@
 /**
- *
+ * com.ironhack.midtermProject.controller.dto
  */
 package com.ironhack.midtermProject.controller.dto;
 
@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 /**
- *
+ * CreateTransactionDto Class
  */
 public class CreateTransactionDto {
     @NotNull(message = "AccountId cannot be null")
@@ -26,16 +26,16 @@ public class CreateTransactionDto {
     private TypeTransaction typeTransaction;
 
     /**
-     *
+     * Default Constructor CreateTransactionDto.
      */
     public CreateTransactionDto(){}
 
     /**
-     *
-     * @param accountId
-     * @param amount
-     * @param secretKey
-     * @param typeTransaction
+     * CreateTransactionDto
+     * @param accountId Account Id Transaction
+     * @param amount Amount Transaction
+     * @param secretKey secretKey Transaction
+     * @param typeTransaction type of Transaction
      */
     public CreateTransactionDto(Integer accountId, BigDecimal amount, String secretKey, TypeTransaction typeTransaction) {
         this.accountId = accountId;
@@ -45,64 +45,64 @@ public class CreateTransactionDto {
     }
 
     /**
-     *
-     * @return
+     * Getter Account Id Transaction
+     * @return Account Id Transaction
      */
     public Integer getAccountId() {
         return accountId;
     }
 
     /**
-     *
-     * @param accountId
+     * Setter Account Id Transaction
+     * @param accountId Account Id Transaction
      */
     public void setAccountId(Integer accountId) {
         this.accountId = accountId;
     }
 
     /**
-     *
-     * @return
+     * Getter Amount Transaction
+     * @return Amount Transaction
      */
     public BigDecimal getAmount() {
         return amount;
     }
 
     /**
-     *
-     * @param amount
+     * Setter Amount Transaction
+     * @param amount Amount Transaction
      */
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
     /**
-     *
-     * @return
+     * Getter secretKey Transaction
+     * @return secretKey Transaction
      */
     public String getSecretKey() {
         return secretKey;
     }
 
     /**
-     *
-     * @param secretKey
+     * Setter secretKey Transaction
+     * @param secretKey secretKey Transaction
      */
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
 
     /**
-     *
-     * @return
+     * Getter type of Transaction
+     * @return type of Transaction
      */
     public TypeTransaction getTypeTransaction() {
         return typeTransaction;
     }
 
     /**
-     *
-     * @param typeTransaction
+     * Setter type of Transaction
+     * @param typeTransaction type of Transaction
      */
     public void setTypeTransaction(TypeTransaction typeTransaction) {
         this.typeTransaction = typeTransaction;

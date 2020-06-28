@@ -10,7 +10,6 @@ import com.ironhack.midtermProject.model.security.User;
 import com.ironhack.midtermProject.service.CreditCardAccountService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -26,8 +25,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class CreditCardAccountControllerImpl implements CreditCardAccountController {
-
-    private static final Logger LOGGER = LogManager.getLogger(CreditCardAccountControllerImpl.class);
 
     @Autowired
     private CreditCardAccountService creditCardAccountService;
