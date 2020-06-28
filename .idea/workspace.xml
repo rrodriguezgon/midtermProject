@@ -1,16 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb6cd756-4ae4-4d46-8056-9c171b8fccd7" name="Default Changelist" comment="" />
+    <list default="true" id="29dae810-5349-4002-b31d-68227e3617d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/midtermProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/allclasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/MidtermProjectApplication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/CreateCheckingAccountDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/CreateCreditCardAccountDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/CreateSavingAccountDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/CreateTransactionDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/CreateTransferDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/security/CreateAccountHolderDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/security/CreateAdminDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/security/CreateThirdPartyDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/security/UpdateAccountHolderDto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/dto/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/CheckingAccountControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/CreditCardAccountControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/SavingAccountControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/TransferControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/security/AccountHolderControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/security/AdminControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/security/ThirdPartyControllerImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/impl/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/CheckingAccountController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/CreditCardAccountController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/SavingAccountController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/TransferController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/security/AccountHolderController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/security/AdminController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/security/ThirdPartyController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/controller/interfaces/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/enums/StatusAccount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/enums/TypeTransaction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/enums/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/enums/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/DataNotFoundException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/FraudException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/FundsException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/SecurityAccessException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/UserExistException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/exception/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/handler/GlobalHandler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/handler/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/handler/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/Account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/AccountKey.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/CheckingAccount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/CreditCardAccount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/Money.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/SavingsAccount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/StudentCheckingAccount.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/Transfer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/entities/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/AccountHolder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/Address.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/Admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/Role.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/ThirdParty.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/model/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/CheckingAccountRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/CheckingAccountRepositoryTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/CreditCardAccountRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/SavingsAccountRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/StudentCheckingAccountRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/TranferRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/security/AccountHolderRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/security/AdminRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/security/RoleRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/security/ThirdPartyRepository.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/repository/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/security/CustomSecurityUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/security/CustomSecurityUserTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/security/SecurityConfiguration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/CheckingAccountService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/CreditCardAccountService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/ResetService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/SavingAccountService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/TransferService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/security/AccountHolderService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/security/AdminService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/security/ThirdPartyService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/security/UserDetailsServiceImpl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/security/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/service/security/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/util/PasswordUtility.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/util/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/com/ironhack/midtermProject/util/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/external/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-3.4.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-ui.structure.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jszip/dist/jszip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/member-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/package-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/Documentation/type-search-index.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/logs/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/MidtermProjectApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/CreateCheckingAccountDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/CreateCreditCardAccountDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/CreateSavingAccountDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/CreateTransactionDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/CreateTransferDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/security/CreateAccountHolderDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/security/CreateAdminDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/security/CreateThirdPartyDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/dto/security/UpdateAccountHolderDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/CheckingAccountControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/CreditCardAccountControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/ResetControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/SavingAccountControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/TransferControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/security/AccountHolderControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/security/AdminControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/impl/security/ThirdPartyControllerImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/CheckingAccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/CreditCardAccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/ResetController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/SavingAccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/TransferController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/security/AccountHolderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/security/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/controller/interfaces/security/ThirdPartyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/enums/StatusAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/enums/TypeTransaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/exception/DataNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/exception/FraudException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/exception/FundsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/exception/ResetDataException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/exception/SecurityAccessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/exception/UserExistException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/handler/GlobalHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/AccountKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/CheckingAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/CreditCardAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/Money.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/SavingsAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/StudentCheckingAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/Transactional.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/entities/Transfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/security/AccountHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/security/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/security/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/security/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/security/ThirdParty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/model/security/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/CheckingAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/CreditCardAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/SavingsAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/StudentCheckingAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/TranferRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/security/AccountHolderRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/security/AdminRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/security/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/repository/security/ThirdPartyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/security/CustomSecurityUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/security/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/CheckingAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/CreditCardAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/ResetService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/SavingAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/TransferService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/security/AccountHolderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/security/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/security/ThirdPartyService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/service/security/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/java/com/ironhack/midtermProject/util/PasswordUtility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/main/resources/populate.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/CreateCheckingAccountDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/CreateCreditCardAccountDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/CreateSavingAccountDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/CreateTransactionDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/CreateTransferDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/security/CreateAccountHolderDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/security/CreateAdminDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/security/CreateThirdPartyDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/dto/security/UpdateAccountHolderDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/CheckingAccountControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/CreditCardAccountControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/ResetControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/SavingAccountControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/TransferControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/security/AccountHolderControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/security/AdminControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/controller/impl/security/ThirdPartyControllerImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/enums/StatusAccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/exception/DataNotFoundExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/exception/FraudExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/exception/FundsExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/exception/ResetDataExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/exception/SecurityAccessExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/exception/UserExistExceptionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/handler/GlobalHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/AccountKeyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/AccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/CheckingAccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/CreditCardAccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/MoneyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/SavingsAccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/StudentCheckingAccountTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/entities/TransferTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/security/AccountHolderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/security/AddressTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/security/AdminTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/security/RoleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/security/ThirdPartyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/model/security/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/repository/CheckingAccountRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/security/CustomSecurityUserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/CheckingAccountServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/CreditCardAccountServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/ResetServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/SavingAccountServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/TransferServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/security/AccountHolderServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/security/AdminServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/security/ThirdPartyServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/service/security/UserDetailsServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/java/com/ironhack/midtermProject/util/PasswordUtilityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midtermProject/src/test/resources/application.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1dfjNF5wl08frLVu5GPAurYVzqE" />
+  <component name="ProjectId" id="1dXWNeS8rRalCcAo1bNpFvg1AFc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,25 +360,388 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/midtermProject" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ironhack.midtermProject.model.viewModel" />
+      <recent name="com.ironhack.midtermProject.service" />
+      <recent name="com.ironhack.midtermProject.exception" />
+      <recent name="com.ironhack.midtermProject.controller.impl" />
+      <recent name="com.ironhack.midtermProject.util" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ironhack.midtermProject.controller.impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ironhack.midtermProject.controller.dto.security" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ironhack.midtermProject.exception" />
+      <recent name="com.ironhack.midtermProject.controller.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in midtermProject">
+    <configuration name="AccountHolderServiceTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="midtermProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ironhack.midtermProject.service.security.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ironhack.midtermProject.service.security" />
+      <option name="MAIN_CLASS_NAME" value="com.ironhack.midtermProject.service.security.AccountHolderServiceTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in midtermProject (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="midtermProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in midtermProject (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="midtermProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in midtermProject (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="midtermProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in midtermProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="midtermProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in midtermProject" />
+        <item itemvalue="JUnit.AccountHolderServiceTest.findAll" />
+        <item itemvalue="JUnit.All in midtermProject (3)" />
+        <item itemvalue="JUnit.All in midtermProject (2)" />
+        <item itemvalue="JUnit.All in midtermProject (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb6cd756-4ae4-4d46-8056-9c171b8fccd7" name="Default Changelist" comment="" />
-      <created>1592822999542</created>
+      <changelist id="29dae810-5349-4002-b31d-68227e3617d6" name="Default Changelist" comment="" />
+      <created>1592571879128</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592822999542</updated>
+      <updated>1592571879128</updated>
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1592895150250">
+    <state x="1294" y="312" key="#com.intellij.ide.util.MemberChooser" timestamp="1593380675868">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1725" y="420" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592992284066" />
+    <state x="1294" y="312" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593380675868" />
+    <state x="873" y="625" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593208606823">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592895150250" />
+    <state x="873" y="625" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593208606823" />
+    <state x="655" y="464" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592923245621" />
+    <state x="687" y="389" width="441" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593382032619">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="916" y="524" width="441" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592998988705" />
+    <state x="687" y="389" width="545" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1593382032619" />
+    <state x="1020" y="380" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592894299944">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1020" y="380" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592894299944" />
+    <state x="1560" y="363" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593208957229">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1560" y="363" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593208957229" />
+    <state x="1170" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592759009741" />
+    <state x="521" y="457" key="#xdebugger.XInspectDialog" timestamp="1592767160285">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="521" y="457" key="#xdebugger.XInspectDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592767160285" />
+    <state x="1029" y="410" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593212948570">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1029" y="410" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593212948570" />
+    <state width="523" height="466" key="DebuggerActiveHint" timestamp="1593158193667">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="523" height="466" key="DebuggerActiveHint/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593158193667" />
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1593196796183">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1061" y="456" key="FileChooserDialogImpl/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593196796183" />
+    <state x="796" y="339" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593191145616" />
+    <state width="1877" height="355" key="GridCell.Tab.0.bottom" timestamp="1593380562389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="446" key="GridCell.Tab.0.bottom/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593212948599" />
+    <state width="1877" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593380562389" />
+    <state width="1877" height="355" key="GridCell.Tab.0.center" timestamp="1593380562389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="446" key="GridCell.Tab.0.center/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593212948599" />
+    <state width="1877" height="355" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593380562389" />
+    <state width="1877" height="355" key="GridCell.Tab.0.left" timestamp="1593380562389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="446" key="GridCell.Tab.0.left/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593212948599" />
+    <state width="1877" height="355" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593380562389" />
+    <state width="1877" height="355" key="GridCell.Tab.0.right" timestamp="1593380562389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="446" key="GridCell.Tab.0.right/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593212948599" />
+    <state width="1877" height="355" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593380562389" />
+    <state width="2517" height="574" key="GridCell.Tab.1.bottom" timestamp="1593367192367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="574" key="GridCell.Tab.1.bottom/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593160061948" />
+    <state width="2517" height="574" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593367192367" />
+    <state width="2517" height="574" key="GridCell.Tab.1.center" timestamp="1593367192367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="574" key="GridCell.Tab.1.center/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593160061948" />
+    <state width="2517" height="574" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593367192367" />
+    <state width="2517" height="574" key="GridCell.Tab.1.left" timestamp="1593367192367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="574" key="GridCell.Tab.1.left/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593160061948" />
+    <state width="2517" height="574" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593367192367" />
+    <state width="2517" height="574" key="GridCell.Tab.1.right" timestamp="1593367192367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="2517" height="574" key="GridCell.Tab.1.right/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593160061948" />
+    <state width="2517" height="574" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593367192367" />
+    <state x="1107" y="362" key="Maven.ArtifactSearchDialog" timestamp="1593191641353">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1107" y="362" key="Maven.ArtifactSearchDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593191641353" />
+    <state x="830" y="269" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593191131325" />
+    <state x="1252" y="396" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593380822375">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1669" y="533" key="com.intellij.testIntegration.createTest.CreateTestDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1593001599665" />
+    <state x="1252" y="396" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593380822375" />
+    <state x="168" y="433" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1592989645876">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="168" y="433" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592989645876" />
+    <state x="1762" y="461" key="refactoring.ChangeSignatureDialog" timestamp="1592694154946">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1762" y="461" key="refactoring.ChangeSignatureDialog/-1920.0.1920.1020/0.0.2560.1400@0.0.2560.1400" timestamp="1592694154946" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ironhack/midtermProject/model/entities/CheckingAccount.java</url>
+          <line>17</line>
+          <properties field="minimumBalance" class="com.ironhack.midtermProject.model.entities.CheckingAccount" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/midtermProject$TransferServiceTest_createTransaction.ic" NAME="TransferServiceTest.createTransaction Coverage Results" MODIFIED="1593156231194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$MoneyTest.ic" NAME="MoneyTest Coverage Results" MODIFIED="1593012947609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AddressTest.ic" NAME="AddressTest Coverage Results" MODIFIED="1593014824261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$StudentCheckingAccountTest.ic" NAME="StudentCheckingAccountTest Coverage Results" MODIFIED="1593015508053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CheckingAccountTest.ic" NAME="CheckingAccountTest Coverage Results" MODIFIED="1593012022346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AdminControllerImplTest.ic" NAME="AdminControllerImplTest Coverage Results" MODIFIED="1593109977779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1593015854715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$TransferServiceTest.ic" NAME="TransferServiceTest Coverage Results" MODIFIED="1593158821659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$All_in_midtermProject__1_.ic" NAME="All in midtermProject (1) Coverage Results" MODIFIED="1593376032408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/midtermProject$CreateAccountHolderDtoTest.ic" NAME="CreateAccountHolderDtoTest Coverage Results" MODIFIED="1593000028131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreateTransferDtoTest.ic" NAME="CreateTransferDtoTest Coverage Results" MODIFIED="1593001356523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$GlobalHandlerTest.ic" NAME="GlobalHandlerTest Coverage Results" MODIFIED="1593006674389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.handler.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$ResetServiceTest.ic" NAME="ResetServiceTest Coverage Results" MODIFIED="1593367377294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$SavingsAccountTest.ic" NAME="SavingsAccountTest Coverage Results" MODIFIED="1593013588634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$UpdateAccountHolderDtoTest.ic" NAME="UpdateAccountHolderDtoTest Coverage Results" MODIFIED="1593000346270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$ThirdPartyServiceTest.ic" NAME="ThirdPartyServiceTest Coverage Results" MODIFIED="1593021045623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$TransferServiceTest_findAll.ic" NAME="TransferServiceTest.findAll Coverage Results" MODIFIED="1593026608528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1593010550629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreateCreditCardAccountDtoTest.ic" NAME="CreateCreditCardAccountDtoTest Coverage Results" MODIFIED="1593000779947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreditCardAccountServiceTest_getByIdStudent.ic" NAME="CreditCardAccountServiceTest.getByIdStudent Coverage Results" MODIFIED="1593024585329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$FundsExceptionTest.ic" NAME="FundsExceptionTest Coverage Results" MODIFIED="1593005906883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.exception.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderServiceTest_findById.ic" NAME="AccountHolderServiceTest.findById Coverage Results" MODIFIED="1593017349555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$All_in_midtermProject__3_.ic" NAME="All in midtermProject (3) Coverage Results" MODIFIED="1593380347334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/midtermProject$CreditCardAccountServiceTest_findAll.ic" NAME="CreditCardAccountServiceTest.findAll Coverage Results" MODIFIED="1593023489939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreditCardAccountServiceTest.ic" NAME="CreditCardAccountServiceTest Coverage Results" MODIFIED="1593024874212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreditCardAccountControllerImplTest.ic" NAME="CreditCardAccountControllerImplTest Coverage Results" MODIFIED="1593111981554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderControllerImplTest_getById.ic" NAME="AccountHolderControllerImplTest.getById Coverage Results" MODIFIED="1593100072365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$All_in_midtermProject.ic" NAME="All in midtermProject Coverage Results" MODIFIED="1593380513860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/midtermProject$CustomSecurityUserTest.ic" NAME="CustomSecurityUserTest Coverage Results" MODIFIED="1593015951341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$All_in_midtermProject__2_.ic" NAME="All in midtermProject (2) Coverage Results" MODIFIED="1593380128227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/midtermProject$MoneyTest_increaseAmountMoney.ic" NAME="MoneyTest.increaseAmountMoney Coverage Results" MODIFIED="1593013132231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreateAdminDtoTest.ic" NAME="CreateAdminDtoTest Coverage Results" MODIFIED="1593000037302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreateCheckingAccountDtoTest.ic" NAME="CreateCheckingAccountDtoTest Coverage Results" MODIFIED="1593000574397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreditCardAccountTest.ic" NAME="CreditCardAccountTest Coverage Results" MODIFIED="1593012320837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreateSavingAccountDtoTest.ic" NAME="CreateSavingAccountDtoTest Coverage Results" MODIFIED="1593000966787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.dto.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$All_in_midtermProject__5_.ic" NAME="All in midtermProject (5) Coverage Results" MODIFIED="1593367056013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/midtermProject$SavingAccountServiceTest.ic" NAME="SavingAccountServiceTest Coverage Results" MODIFIED="1593026141006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderServiceTest_update.ic" NAME="AccountHolderServiceTest.update Coverage Results" MODIFIED="1593018182371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderServiceTest_deleteById.ic" NAME="AccountHolderServiceTest.deleteById Coverage Results" MODIFIED="1593018262933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$TransferServiceTest_createTransfer.ic" NAME="TransferServiceTest.createTransfer Coverage Results" MODIFIED="1593069686052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$ThirdPartyControllerImplTest.ic" NAME="ThirdPartyControllerImplTest Coverage Results" MODIFIED="1593110475915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$ThirdPartyTest.ic" NAME="ThirdPartyTest Coverage Results" MODIFIED="1593015666416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AdminServiceTest.ic" NAME="AdminServiceTest Coverage Results" MODIFIED="1593019971748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$All_in_midtermProject__4_.ic" NAME="All in midtermProject (4) Coverage Results" MODIFIED="1593366824624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/midtermProject$AccountKeyTest.ic" NAME="AccountKeyTest Coverage Results" MODIFIED="1593010772141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AdminTest.ic" NAME="AdminTest Coverage Results" MODIFIED="1593014942292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$RoleTest.ic" NAME="RoleTest Coverage Results" MODIFIED="1593015288386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderServiceTest.ic" NAME="AccountHolderServiceTest Coverage Results" MODIFIED="1593017996522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CheckingAccountServiceTest.ic" NAME="CheckingAccountServiceTest Coverage Results" MODIFIED="1593022939512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$TransferServiceTest_createTransferCreditCardAccountOK.ic" NAME="TransferServiceTest.createTransferCreditCardAccountOK Coverage Results" MODIFIED="1593158663285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderTest.ic" NAME="AccountHolderTest Coverage Results" MODIFIED="1593014581028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CheckingAccountControllerImplTest.ic" NAME="CheckingAccountControllerImplTest Coverage Results" MODIFIED="1593111089076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$CreditCardAccountServiceTest_create.ic" NAME="CreditCardAccountServiceTest.create Coverage Results" MODIFIED="1593023648382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$UserDetailsServiceImplTest.ic" NAME="UserDetailsServiceImplTest Coverage Results" MODIFIED="1593112323915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.service.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$TransferControllerImplTest.ic" NAME="TransferControllerImplTest Coverage Results" MODIFIED="1593115602101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$AccountHolderControllerImplTest.ic" NAME="AccountHolderControllerImplTest Coverage Results" MODIFIED="1593100254922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.controller.impl.security.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/midtermProject$TransferTest.ic" NAME="TransferTest Coverage Results" MODIFIED="1593013912011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ironhack.midtermProject.model.entities.*</FILTER>
+    </SUITE>
   </component>
 </project>
